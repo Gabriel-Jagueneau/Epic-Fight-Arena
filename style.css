@@ -1,4 +1,11 @@
+html {
+    user-select: none;
+    font-family: Rubik;
+}
+
+.mcFont {font-family: Minecraft;}
+
 body {
     display: flex;
-    background-color: rgb(222, 51, 51);
+    background-color: rgb(235, 61, 61);
 }
