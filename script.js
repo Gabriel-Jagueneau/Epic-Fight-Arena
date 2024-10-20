@@ -1,5 +1,5 @@
 var oldselectionID = "home";
-var toggleSelection = function(newID) {
+var toggleSelection = function(newID, file) {
     const oldItem = document.getElementById(oldselectionID);
     const newItem = document.getElementById(newID);
 
@@ -7,21 +7,22 @@ var toggleSelection = function(newID) {
     newItem.classList.toggle('selected');
 
     oldselectionID = newID;
-    fetchFile(newID);
+    fetchFile(file);
 }
 
-async function fetchFile(id) {
-    try {
-            const jsonResponse = await fetch(`info/${id}-page.json`);
-            const jsonData = await jsonResponse.json();
-            console.log('Données JSON:', jsonData);
-            return jsonData;
-    } catch (e) {
-        try {
-            const htmlResponse = await fetch(`info/${id}-page.html`);
-            const htmlData = await htmlResponse.text();
-            console.log('Données HTML:', htmlData);
-            return htmlData;
-        } catch (e) {}
+async function fetchFile(file) {
+    const extension = file.split('.').pop().toLowerCase();
+    if (extension === 'html') {
+        const htmlResponse = await fetch(`info/${file}`);
+        const htmlData = await htmlResponse.text();
+        console.log('Données HTML:', htmlData);
+        return htmlData;
+    } else if (extension === 'json') {
+        const jsonResponse = await fetch(`info/${file}`);
+        const jsonData = await jsonResponse.json();
+        console.log('Données JSON:', jsonData);
+        return jsonData;
+    } else {
+        return;
     }
 }
