@@ -12,16 +12,16 @@ var toggleSelection = function(newID, file) {
 
 async function fetchFile(file) {
     const extension = file.split('.').pop().toLowerCase();
+    const fetcher = document.getElementById('fetcher');
+
     if (extension === 'html') {
         const htmlResponse = await fetch(`info/${file}`);
         const htmlData = await htmlResponse.text();
-        console.log('Données HTML:', htmlData);
-        return htmlData;
+        fetcher.innerHTML = htmlData;
     } else if (extension === 'json') {
         const jsonResponse = await fetch(`info/${file}`);
         const jsonData = await jsonResponse.json();
-        console.log('Données JSON:', jsonData);
-        return jsonData;
+        fetcher.innerHTML = jsonData['hello'];
     } else {
         return;
     }
