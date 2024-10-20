@@ -1,0 +1,6 @@
+link: https://www.youtube.com/watch?v=shm5FdsyYts&ab_channel=DrcMind
+
+- DO A PUSH
+git add .
+git commit -m "Default commit"
+git push -u origin master
