@@ -7,26 +7,21 @@ var toggleSelection = function(newID) {
     newItem.classList.toggle('selected');
 
     oldselectionID = newID;
-    showSelection(newID);
+    fetchFile(newID);
 }
 
-var getExtension = function(id) {
-    let extension;
+async function fetchFile(id) {
     try {
-        JSON.parse(`info/${id}-page.json`);
-        extension = ".json";
-    } catch(e) {
-        extension = ".html";
+            const jsonResponse = await fetch(`info/${id}-page.json`);
+            const jsonData = await jsonResponse.json();
+            console.log('Données JSON:', jsonData);
+            return jsonData;
+    } catch (e) {
+        try {
+            const htmlResponse = await fetch(`info/${id}-page.html`);
+            const htmlData = await htmlResponse.text();
+            console.log('Données HTML:', htmlData);
+            return htmlData;
+        } catch (e) {}
     }
-    console.log(`info/${id}-page${extension}`)
-    return extension
-}
-info/htp-page.html
-var showSelection = function(id) {
-    extension = getExtension(id);
-    fetch(`info/${id}-page${extension}`)
-        .then(response => response.json())
-        .then(data => {
-            
-        });
 }
