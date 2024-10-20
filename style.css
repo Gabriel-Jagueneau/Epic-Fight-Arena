@@ -3,9 +3,46 @@ html {
     font-family: Rubik;
 }
 
-.mcFont {font-family: Minecraft;}
+.mcfont {font-family: Minecraft;}
 
 body {
     display: flex;
     background-color: rgb(235, 61, 61);
-} 
+}
+
+.topbar {
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgb(44, 41, 41);
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+    padding: 0 20px;
+    & div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        & div {
+            background-color: rgb(86, 30, 30);
+            border-radius: 90px;
+            padding: 5px 10px;
+            transition: ease 0.2s;
+            cursor: pointer;
+            &:hover {
+                background-color: rgb(144, 40, 40);
+                box-shadow: 0 0 6px rgb(144, 40, 40);
+            }
+        }
+        & .selected {
+            background: linear-gradient(rgb(144, 40, 40), rgb(144, 0, 0));
+            box-shadow: 0 0 10px rgb(144, 40, 40);
+        }
+    }
+    & .logo {
+        text-shadow: 0 0 20px rgb(182, 34, 34);
+    }
+}
