@@ -3,6 +3,13 @@ html {
     font-family: sans-serif;
     overflow-x: hidden;
 }
+body {
+    display: flex;
+    background-color: rgb(105, 25, 25);
+    justify-content: center;
+}
+
+/*      format      */
 
 .itworkedwell {
     background-color: greenyellow;
@@ -12,92 +19,7 @@ html {
 .golden {color: rgb(255, 229, 31)}
 .bold {font-weight: 600;}
 
-body {
-    display: flex;
-    background-color: rgb(105, 25, 25);
-    justify-content: center;
-}
-
-.topbar {
-    z-index: 100;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background-color: rgb(44, 41, 41);
-    color: aliceblue;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: calc(100% - 40px);
-    padding: 0 20px;
-    & div {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 5px;
-        & div {
-            background-color: rgb(86, 30, 30);
-            border-radius: 90px;
-            padding: 5px 10px;
-            transition: ease 0.2s;
-            cursor: pointer;
-            &:hover {
-                background-color: rgb(144, 40, 40);
-                box-shadow: 0 0 6px rgb(144, 40, 40);
-            }
-        }
-        & .selected {
-            position: relative;
-            transition: all 0.2s ease-in-out;
-            overflow: hidden;
-            background-color: rgb(144, 40, 40);
-            box-shadow: 0 0 15px rgb(144, 40, 40) !important;
-            cursor: default;
-            padding: 6px 12px;
-            font-size: larger;
-            &::before {
-                content: "";
-                position: absolute;
-                width: 100px;
-                height: 100%;
-                background-image: linear-gradient(
-                    120deg,
-                    rgba(255, 255, 255, 0) 30%,
-                    rgba(240, 248, 255, 0.8),
-                    rgba(255, 255, 255, 0) 70%
-                );
-                top: 0;
-                left: -100px;
-                opacity: 0.6;
-                animation: shine 4s ease-out infinite;
-            }
-        }
-    }
-    & .logo {
-        cursor: pointer;
-        & img {
-            height: 60px;
-            padding: 10px 5px;
-        }
-    }
-    & .socials {
-        display: flex;
-        flex-direction: row;
-        & div {
-            padding-left: 5px;
-        }
-        & img {
-            height: 20px;
-            border-radius: 90px;
-        }
-    }
-}
-
-@keyframes shine {
-    0% {left: -100px}
-    20% {left: 100%}
-    to {left: 100%}
-}
+/*      content      */
 
 #fetcher {
     height: auto;
@@ -105,45 +27,49 @@ body {
     color: rgb(233, 233, 233);
 }
 
+.logotot {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+        width: 100%;
+        height: fit-content;
+        color: rgb(255, 229, 31);
+        text-shadow: 0 0 20px rgb(0, 0, 0);
+        font-size: 55px !important;
+        & img {
+            height: auto;
+            position: relative;
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 100%, rgba(0, 0, 0, 0));
+            z-index: 1;
+            width: 60%;
+            background-color: aqua;
+            margin-left: 16px;
+        }
+    }
+    & img {
+        position: absolute;
+        z-index: -1;
+        width: calc(100% + 70px);
+        height: calc(100vh + 16px);
+        top: 0px;
+        left: -8px;
+        object-fit: cover;
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0));
+    }
+}
+
 & .home {
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
-
-    & .logotot {
-        position: relative;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        & h1 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 100px;
-            width: 100%;
-            color: rgb(255, 229, 31);
-            & img {
-                height: auto;
-                position: relative;
-                mask-image: none;
-                z-index: 1;
-                width: 60%;
-                margin-left: 16px;
-            }
-        }
-        & img {
-            position: absolute;
-            z-index: -1;
-            width: calc(100% + 70px);
-            height: calc(100vh + 16px);
-            top: 0px;
-            left: -8px;
-            object-fit: cover;
-            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0));
-        }
-    }
 
     & .description {
         display: flex;
@@ -157,7 +83,7 @@ body {
         }
         & .text {
             width: calc(100% - 20px);
-            background-color: rgb(44, 41, 41);
+            background-color: rgba(44, 41, 41, 0.8);
             padding: 20px 10px;
             text-align: center;
             font-weight: 400;
@@ -206,30 +132,6 @@ body {
     width: 100%;
     align-items: center;
 
-    & .logotot {
-        position: relative;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        & h1 {
-            margin-top: 120px;
-            text-shadow: 0 0 20px rgb(0, 0, 0);
-            color: rgb(255, 229, 31);
-            font-size: 60px !important;
-        }
-        & img {
-            position: absolute;
-            z-index: -1;
-            width: calc(100% + 70px);
-            height: calc(100vh + 16px);
-            top: 0px;
-            left: -8px;
-            object-fit: cover;
-            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0));
-        }
-    }
-
     & .steps {
         display: flex;
         flex-direction: column;
@@ -237,11 +139,12 @@ body {
         gap: 25px;
         & .step {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: space-between;
             gap: 25px;
-            background-color: rgb(44, 41, 41);
+            background-color: rgba(44, 41, 41, 0.8);
             border-radius: 15px;
-            padding: 10px 15px;
+            padding: 30px;
             & .top {
                 display: flex;
                 flex-direction: row;
@@ -259,11 +162,11 @@ body {
             & .content {
                 display: flex;
                 flex-direction: row;
-                margin-left: 20px;
                 gap: 20px;
                 align-items: center;
                 font-size: 22px;
                 background-color: rgb(44, 41, 41);
+                border: solid 2px rgba(255, 229, 31, 0.2);
                 width: fit-content;
                 padding: 5px 15px 5px 20px;
                 border-radius: 90px;
@@ -288,29 +191,6 @@ body {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    & .logotot {
-        position: relative;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        & h1 {
-            margin-top: 120px;
-            text-shadow: 0 0 20px rgb(0, 0, 0);
-            color: rgb(255, 229, 31);
-            font-size: 60px !important;
-        }
-        & img {
-            position: absolute;
-            z-index: -1;
-            width: calc(100% + 70px);
-            height: calc(100vh + 16px);
-            top: 0px;
-            left: -8px;
-            object-fit: cover;
-            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0));
-        }
-    }
 }
 
 & .changeLog {
@@ -318,29 +198,6 @@ body {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    & .logotot {
-        position: relative;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        & h1 {
-            margin-top: 120px;
-            text-shadow: 0 0 20px rgb(0, 0, 0);
-            color: rgb(255, 229, 31);
-            font-size: 60px !important;
-        }
-        & img {
-            position: absolute;
-            z-index: -1;
-            width: calc(100% + 70px);
-            height: calc(100vh + 16px);
-            top: 0px;
-            left: -8px;
-            object-fit: cover;
-            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0));
-        }
-    }
     & .content {
         display: flex;
         flex-direction: column;
@@ -358,7 +215,7 @@ body {
             display: flex;
             flex-direction: column;
             padding: 20px;
-            background-color: rgb(44, 41, 41);
+            background-color: rgba(44, 41, 41, 0.8);
             border-radius: 15px;
             gap: 10px;
             & .maininfo {

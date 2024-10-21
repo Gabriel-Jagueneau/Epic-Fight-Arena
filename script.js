@@ -85,8 +85,8 @@ async function createDataFOR(id) {
                 ).join('')}
                 `;
         
-        case "more":
-            const moreResponse = await fetch(`${rawName}info/more.json`);
+        case "more": // ${rawName}
+            const moreResponse = await fetch(`info/more.json`);
             const moreData = await moreResponse.json();
             return `
                 ${moreData.name}
