@@ -1,13 +1,13 @@
 html {
     user-select: none;
-    font-family: Rubik;
+    font-family: sans-serif;
 }
 
 .mcfont {font-family: Minecraft;}
 
 body {
     display: flex;
-    background-color: rgb(125, 20, 20);
+    background-color: rgb(105, 25, 25);
 }
 
 .topbar {
@@ -84,7 +84,7 @@ body {
     height: auto;
     width: 100%;
     margin-top: 85px;
-    color: aliceblue;
+    color: rgb(233, 233, 233);
 }
 
 & .home {
@@ -102,6 +102,12 @@ body {
         & h1 {
             text-shadow: 0 0 20px rgb(0, 0, 0);
             color: rgb(224, 196, 36);
+            & img {
+                height: 80px;
+                position: relative;
+                mask-image: none;
+                z-index: 1;
+            }
         }
         & img {
             position: absolute;
@@ -111,7 +117,7 @@ body {
             top: -8px;
             left: -8px;
             object-fit: cover;
-            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 60%, rgba(0, 0, 0, 0));
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0));
         }
     }
 
@@ -119,7 +125,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 600px;
+        width: 700px;
         overflow: hidden;
         gap: 10px;
         & .text, iframe {
@@ -128,8 +134,9 @@ body {
         & .text {
             width: calc(100% - 20px);
             background-color: rgba(44, 41, 41, 0.6);
-            padding: 10px;
+            padding: 20px 10px;
             text-align: center;
+            font-weight: 400;
         }
         & iframe {
             width: 100%;
