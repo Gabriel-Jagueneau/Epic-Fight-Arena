@@ -45,7 +45,7 @@ async function fetchFile(id) {
         <section class="${id}">
             <div class="logotot">
                 <h1 class="mcfont" style="font-size: 40px;">${jsonData['name']}</h1>
-                <img src="https://raw.githubusercontent.com/TheGreatMegalodon/Epic-Fight-Arena/refs/heads/master/images/banners/home-banner.png" alt="">
+                <img src="${rawName}images/banners/home-banner.png" alt="">
             </div>
 
             <div class="content">
