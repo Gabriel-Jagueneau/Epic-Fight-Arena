@@ -106,13 +106,13 @@ body {
         width: 600px;
         overflow: hidden;
         gap: 10px;
-        & .text, video {
+        & .text, iframe {
             border-radius: 10px;
         }
         & .text {
             width: 100%;
         }
-        & video {
+        & iframe {
             width: 100%;
         }
     }
