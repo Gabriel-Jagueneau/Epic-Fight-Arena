@@ -4,12 +4,18 @@ html {
     overflow-x: hidden;
 }
 
+.itworkedwell {
+    background-color: greenyellow;
+    transition: ease 0.4s;
+}
 .mcfont {font-family: Minecraft; transform: translateY(1px);}
 .golden {color: rgb(255, 229, 31)}
+.bold {font-weight: 600;}
 
 body {
     display: flex;
     background-color: rgb(105, 25, 25);
+    justify-content: center;
 }
 
 .topbar {
@@ -112,16 +118,18 @@ body {
         align-items: center;
         justify-content: center;
         & h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-top: 100px;
-            width: fit-content;
-            text-shadow: 0 0 20px rgb(0, 0, 0);
+            width: 100%;
             color: rgb(255, 229, 31);
             & img {
-                height: 100px;
+                height: auto;
                 position: relative;
                 mask-image: none;
                 z-index: 1;
-                width: auto;
+                width: 60%;
                 margin-left: 16px;
             }
         }
@@ -233,7 +241,7 @@ body {
             gap: 25px;
             background-color: rgba(0, 255, 255, 0.05);
             border-radius: 15px;
-            padding: 10px;
+            padding: 10px 15px;
             & .top {
                 display: flex;
                 flex-direction: row;
@@ -331,6 +339,78 @@ body {
             left: -8px;
             object-fit: cover;
             mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0));
+        }
+    }
+    & .content {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        gap: 20px;
+        margin-bottom: 60px;
+        & .important {
+            border: solid 2px rgba(255, 229, 31, 0.695);
+            background-color: rgb(55, 54, 43) !important;
+        }
+        & .latest {
+            border: solid 2px rgba(0, 255, 255, 0.7);
+        }
+        & .conte {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background-color: rgb(44, 41, 41);
+            border-radius: 15px;
+            gap: 10px;
+            & .maininfo {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 15px;
+                font-size: 25px;
+                & .latest {
+                    transform: translateY(-2px);
+                    display: flex;
+                    align-items: center;
+                    font-size: 20px;
+                    color: aqua;
+                    background-color: rgba(0, 255, 255, 0.1);
+                    border-radius: 10px;
+                    padding: 6px 10px 2px 12px;
+                }
+            }
+            & .informations {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                & .globalTitle {
+                    color: rgb(255, 229, 31);
+                    font-size: 22px;
+                    font-weight: 600;
+                }
+                & .secondaryTitle {
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin-top: 10px;
+                    margin-left: 5px;
+                }
+                & .changes {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2px;
+                    margin-top: 5px;
+                    margin-left: 10px;
+                    font-size: 14px;
+                    font-weight: 200;
+                    & .change {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 6px;
+                        & .tpe {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
         }
     }
 }

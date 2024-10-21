@@ -1,3 +1,102 @@
 {
-    "name":"Change Log"
+    "name":"Change Log",
+    "logs": [
+        {
+            "date": "14/03/24",
+            "update": "Epic Fight Arena 2.0",
+            "important": false,
+
+            "globalTitle": "Overhaul",
+            "content": [
+                {
+                    "secondaryTitle": "Content changes:",
+                    "changes": [
+                        "New map, Bobisburg",
+                        "New game-mode",
+                        "3 new classes!!",
+                        "Weapon skins",
+                        "Minecraft-Discord in-game chat",
+                        "Commands for seeing your stats (kills, deaths, wins, losses, etc...)",
+                        "Base stamina reduced by 30%, no more dodge spam!",
+                        "Players can not get stuck on different maps anymore",
+                        "New sounds for bows, crossbows, rolling",
+                        "Insane performance changes (Signs, decorated pots, banners, campfires, levers etc... decrease FPS DRASTICALLY, we removed all of them resulting in more than 10x performance increase!! Just for reference, I have an RTX 3070 and I used to have 70 FPS on the smallest map, now I have 500!!)"
+                    ]
+                },
+                {
+                    "secondaryTitle": "Class changes:",
+                    "changes": [
+                        "Archer ability: Resupply",
+                        "Samurai ability: Blackout",
+                        "Viking ability: Shockwave",
+                        "Viking overhaul",
+                        "Viking no longer freezes teammates",
+                        "Berserker lower attack speed",
+                        "Samurai is now META",
+                        "Sea King only available on Blue team, only on Red",
+                        "Gunslinger ammo recharges on kill with sword, added damage falloff",
+                        "Shinobi slight health regen when ender pearl used",
+                        "Removed Swordmaster helmet",
+                        "Nerfed Swordmaster damage",
+                        "Gunslinger sword buff",
+                        "Players now teleport to random locations in the class selection lobby (to give other players a chance to play popular classes)"
+                    ]
+                },
+                {
+                    "secondaryTitle": "Epic Fight guarding changes:",
+                    "changes": [
+                        "impact guard now blocks 50% of incoming damage instead of 80% (arrows, tridents, explosions, magic)",
+                        "Parrying much more useful, however penalty is much higher (fail to parry twice and you will be guard broken)"
+                    ]
+                },
+                {
+                    "secondaryTitle": "Revelation changes:",
+                    "changes": [
+                        "Block <span class='bold'>4 > 3</span>",
+                        "Parry <span class='bold'>6 > 10</span>",
+                        "Dodge <span class='bold'>8 > 5</span>",
+                        "Player stacks <span class='bold'>12 > 15</span>"
+                    ]
+                },
+                {
+                    "secondaryTitle": "Miscellanaous",
+                    "changes": [
+                        "Players automatically spectate if they rejoin while dead",
+                        "Set class randomly if no class picked",
+                        "You can now drop arrows (pick up enemy arrows and give them to your teammates!)",
+                        "Fixed items not being given to players sometimes",
+                        "Ability ready notification",
+                        "Chat shows which map you're playing on",
+                        "We changed every passive skill, all players have the same stamina regen",
+                        "Player limit raised to 30"
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "10/08/2024",
+            "update": "pic Fight Arena 1.1",
+            "important": false,
+
+            "globalTitle": "BR changes",
+            "content": [
+                {
+                    "secondaryTitle": "",
+                    "changes": [
+                        "players spawn higher up",
+                        "more random spots so players don't spawn in the same place",
+                        "fixed items not clearing"
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "03/09/2023",
+            "update": "1.0",
+            "important": true,
+
+            "globalTitle": "Started the game",
+            "content": []
+        }
+    ]
 }
