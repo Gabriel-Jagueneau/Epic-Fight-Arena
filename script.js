@@ -13,6 +13,18 @@ var toggleSelection = function(newID, file) {
     history.pushState(null, '', `?page=${newID}`);
 }
 
+var checkFetch = function() {
+    const currentUrl = window.location.href;
+    const currentUrlObj = new URL(currentUrl);
+    const currentParams = new URLSearchParams(currentUrlObj.search);
+    const page = currentParams.get('page');
+    if (page == undefined) {
+        fetchFile('home');
+    } else {
+        fetchFile(page);
+    }
+}
+
 var getFile = function(name) {
     const foundFile = fileList.find(file => file.includes(name));
     return foundFile
