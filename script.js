@@ -2,7 +2,6 @@ var oldselectionID = "home";
 const fileList = ['home.html','howToPlay.html','more.json','changeLog.json'];
 const rawName = 'https://raw.githubusercontent.com/TheGreatMegalodon/Epic-Fight-Arena/refs/heads/master/'
 
-
 var toggleSelection = function(newID) {
     const oldItem = document.getElementById(oldselectionID);
     const newItem = document.getElementById(newID);
