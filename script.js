@@ -1,5 +1,7 @@
 var oldselectionID = "home";
-fileList = ['home.html','howToPlay.html','more.json','changeLog.json'];
+const fileList = ['home.html','howToPlay.html','more.json','changeLog.json'];
+const rawName = 'https://raw.githubusercontent.com/TheGreatMegalodon/Epic-Fight-Arena/refs/heads/master/'
+
 
 var toggleSelection = function(newID) {
     const oldItem = document.getElementById(oldselectionID);
@@ -33,11 +35,11 @@ async function fetchFile(id) {
     const extension = file.split('.').pop().toLowerCase();
     const fetcher = document.getElementById('fetcher');
     if (extension === 'html') {
-        const htmlResponse = await fetch(`info/${file}`);
+        const htmlResponse = await fetch(`${rawName}info/${file}`);
         const htmlData = await htmlResponse.text();
         fetcher.innerHTML = htmlData;
     } else if (extension === 'json') {
-        const jsonResponse = await fetch(`info/${file}`);
+        const jsonResponse = await fetch(`${rawName}info/${file}`);
         const jsonData = await jsonResponse.json();
         id = id.split('.')[0];
         fetcher.innerHTML = `
@@ -61,7 +63,7 @@ async function fetchFile(id) {
 async function createDataFOR(id) {
     switch(id) {
         case "changeLog":
-            const clResponse = await fetch('info/changeLog.json');
+            const clResponse = await fetch(`${rawName}info/changeLog.json`);
             const clData = await clResponse.json();
             return `
                 ${clData.logs.map(i => `
@@ -85,7 +87,7 @@ async function createDataFOR(id) {
                 `;
         
         case "more":
-            const moreResponse = await fetch('info/more.json');
+            const moreResponse = await fetch(`${rawName}info/more.json`);
             const moreData = await moreResponse.json();
             return `
                 ${moreData.name}
