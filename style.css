@@ -49,7 +49,6 @@ body {
             mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 100%, rgba(0, 0, 0, 0));
             z-index: 1;
             width: 60%;
-            background-color: aqua;
             margin-left: 16px;
         }
     }
