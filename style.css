@@ -157,7 +157,7 @@ body {
         }
         & .text {
             width: calc(100% - 20px);
-            background-color: rgba(44, 41, 41, 0.6);
+            background-color: rgb(44, 41, 41);
             padding: 20px 10px;
             text-align: center;
             font-weight: 400;
@@ -239,7 +239,7 @@ body {
             display: flex;
             flex-direction: column;
             gap: 25px;
-            background-color: rgba(0, 255, 255, 0.05);
+            background-color: rgb(44, 41, 41);
             border-radius: 15px;
             padding: 10px 15px;
             & .top {
@@ -313,7 +313,7 @@ body {
     }
 }
 
-& .cl {
+& .changeLog {
     display: flex;
     flex-direction: column;
     width: 100%;

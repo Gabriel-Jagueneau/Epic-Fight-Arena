@@ -1,5 +1,5 @@
 var oldselectionID = "home";
-fileList = ['home.html','htp.html','more.json','cl.json'];
+fileList = ['home.html','howToPlay.html','more.json','changeLog.json'];
 
 var toggleSelection = function(newID) {
     const oldItem = document.getElementById(oldselectionID);
@@ -60,8 +60,8 @@ async function fetchFile(id) {
 
 async function createDataFOR(id) {
     switch(id) {
-        case "cl":
-            const clResponse = await fetch('info/cl.json');
+        case "changeLog":
+            const clResponse = await fetch('info/changeLog.json');
             const clData = await clResponse.json();
             return `
                 ${clData.logs.map(i => `
