@@ -2,7 +2,8 @@ var oldselectionID = "home";
 const fileList = ['home.html','howToPlay.html','more.json','changeLog.json'];
 const rawName = 'https://raw.githubusercontent.com/TheGreatMegalodon/Epic-Fight-Arena/refs/heads/master/'
 
-var toggleSelection = function(newID) {
+var toggleSelection = function(newID, scroll=undefined) {
+    
     const oldItem = document.getElementById(oldselectionID);
     const newItem = document.getElementById(newID);
 
@@ -12,6 +13,14 @@ var toggleSelection = function(newID) {
     oldselectionID = newID;
     fetchFile(newID);
     history.pushState(null, '', `?${newID}`);
+
+    setTimeout(() => {
+        const targetElement = scroll ? document.getElementById(scroll) : 0;
+        window.scrollTo({
+            top: scroll?targetElement.getBoundingClientRect().top - 100 : targetElement,
+            behavior: "smooth"
+        });
+    }, 100);
 }
 
 var checkFetch = function() {
@@ -33,11 +42,11 @@ async function fetchFile(id) {
     const file = getFile(id);
     const extension = file.split('.').pop().toLowerCase();
     const fetcher = document.getElementById('fetcher');
-    if (extension === 'html') {
-        const htmlResponse = await fetch(`${rawName}info/${file}`);
+    if (extension === 'html') {  // ${rawName}
+        const htmlResponse = await fetch(`info/${file}`);
         const htmlData = await htmlResponse.text();
         fetcher.innerHTML = htmlData;
-    } else if (extension === 'json') {
+    } else if (extension === 'json') {  // ${rawName}
         const jsonResponse = await fetch(`${rawName}info/${file}`);
         const jsonData = await jsonResponse.json();
         id = id.split('.')[0];
@@ -61,7 +70,7 @@ async function fetchFile(id) {
 
 async function createDataFOR(id) {
     switch(id) {
-        case "changeLog":
+        case "changeLog":  // ${rawName}
             const clResponse = await fetch(`${rawName}info/changeLog.json`);
             const clData = await clResponse.json();
             return `

@@ -72,6 +72,23 @@
             border-radius: 90px;
         }
     }
+    & .pwu, .cotw {
+        background-color: rgba(255, 229, 31, 0.5);
+        box-shadow: 0 0 10px rgba(0,0,0, 0.2);
+        font-size: 22px;
+        font-weight: 600;
+        padding-left: 25px;
+        & .icon {
+            font-family: 'Material Symbols Rounded';
+            font-size: 26px;
+            padding: 0;
+        }
+        &:hover {
+            background-color: rgb(255, 229, 31);
+            color: black;
+            box-shadow: 0 0 10px rgba(255, 229, 31, 0.6);
+        }
+    }
 }
 
 @keyframes shine {
