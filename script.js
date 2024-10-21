@@ -8,7 +8,7 @@ var toggleSelection = function(newID, file) {
     oldItem.classList.toggle('selected');
     newItem.classList.toggle('selected');
 
-    oldselectionID = newID;
+    oldselectionID = newID; // salut
     fetchFile(file, newID);
     history.pushState(null, '', `?page=${newID}`);
 }
