@@ -8,20 +8,19 @@ var toggleSelection = function(newID) {
     oldItem.classList.toggle('selected');
     newItem.classList.toggle('selected');
 
-    oldselectionID = newID; // salut
+    oldselectionID = newID;
     fetchFile(newID);
-    history.pushState(null, '', `?page=${newID}`);
+    history.pushState(null, '', `?${newID}`);
 }
 
 var checkFetch = function() {
     const currentUrl = window.location.href;
-    const currentUrlObj = new URL(currentUrl);
-    const currentParams = new URLSearchParams(currentUrlObj.search);
-    const page = currentParams.get('page');
+    const page = currentUrl.split('?')[1];
+    console.log(page)
     if (page == undefined) {
         fetchFile('home');
     } else {
-        fetchFile(page);
+        toggleSelection(page);
     }
 }
 
