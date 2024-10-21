@@ -103,22 +103,36 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        width: 600px;
         overflow: hidden;
         gap: 10px;
         & .text, video {
             border-radius: 10px;
         }
         & .text {
-            width: 80%;
+            width: 100%;
         }
         & video {
-            width: 80%;
+            width: 100%;
         }
     }
 }
 
 & .htp {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+& .more {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+& .cl {
     display: flex;
     flex-direction: column;
     width: 100%;
