@@ -44,7 +44,10 @@ async function fetchFile(id) {
         id = id.split('.')[0];
         fetcher.innerHTML = `
         <section class="${id}">
-            <h1 class="mcfont" style="font-size: 40px;">${jsonData['name']}</h1>
+            <div class="logotot">
+                <h1 class="mcfont" style="font-size: 40px;">${jsonData['name']}</h1>
+                <img src="https://raw.githubusercontent.com/TheGreatMegalodon/Epic-Fight-Arena/refs/heads/master/images/banners/home-banner.png" alt="">
+            </div>
         </section>
         `;
     } else {
