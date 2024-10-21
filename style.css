@@ -72,6 +72,17 @@ body {
             padding: 15px 5px;
         }
     }
+    & .socials {
+        display: flex;
+        flex-direction: row;
+        & div {
+            padding-left: 5px;
+        }
+        & img {
+            height: 20px;
+            border-radius: 90px;
+        }
+    }
 }
 
 @keyframes shine {
