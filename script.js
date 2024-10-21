@@ -1,7 +1,7 @@
 var oldselectionID = "home";
 fileList = ['home.html','htp.html','more.json','cl.json'];
 
-var toggleSelection = function(newID, file) {
+var toggleSelection = function(newID) {
     const oldItem = document.getElementById(oldselectionID);
     const newItem = document.getElementById(newID);
 
@@ -9,7 +9,7 @@ var toggleSelection = function(newID, file) {
     newItem.classList.toggle('selected');
 
     oldselectionID = newID; // salut
-    fetchFile(file, newID);
+    fetchFile(newID);
     history.pushState(null, '', `?page=${newID}`);
 }
 
