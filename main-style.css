@@ -144,6 +144,9 @@ body {
     width: 100%;
     background-color: rgb(44, 41, 41);
     & .images {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
         width: 20%;
         & img {
             width: 100%;
@@ -165,6 +168,18 @@ body {
                 background-color: rgba(0, 0, 0, 0.076);
                 text-decoration: underline;
             }
+        }
+        & .link::before {
+            content: "";
+            top: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(255, 229, 31);
+            border-radius: 90px;
+            width: 2px;
+            height: 100%;
+            margin-right: 15px;
         }
     }
     & .connexions {
