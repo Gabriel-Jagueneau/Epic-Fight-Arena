@@ -16,12 +16,25 @@ var toggleSelection = function(newID, scroll=undefined) {
     history.pushState(null, '', `?${newID}`);
 
     setTimeout(() => {
-        const targetElement = scroll ? document.getElementById(scroll) : 0;
+        scrollToElement(scroll);
+    }, 200);
+}
+
+function scrollToElement(id) {
+    if (!id) {
         window.scrollTo({
-            top: scroll?targetElement.getBoundingClientRect().top - 100 : targetElement,
+            top: 0,
             behavior: "smooth"
         });
-    }, 200);
+        return;
+    }
+    var monBloc = document.getElementById(id);
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var targetY = monBloc.getBoundingClientRect().top + scrollTop - 100;
+    window.scrollTo({
+        top: targetY,
+        behavior: "smooth"
+    });
 }
 
 var checkFetch = function() {
