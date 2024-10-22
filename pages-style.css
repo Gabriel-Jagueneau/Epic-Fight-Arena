@@ -96,6 +96,64 @@
                 width: 100%;
                 gap: 10px;
             }
+            & .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                gap: 15px;
+                & .contain {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    padding: 20px;
+                    border-radius: 15px;
+                    width: calc(100% - 40px);
+                    background-color: rgba(44, 41, 41, 0.8);
+                    cursor: pointer;
+                    & .sepa {
+                        padding: 1px;
+                        width: 98%;
+                        margin-left: 1%;
+                        background-color: rgba(255, 229, 31, 0.6);
+                    }
+                    & .question {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        & .name {
+                            font-size: 26px;
+                        }
+                        & .dropdown {
+                            transition: ease 0.2s;
+                            font-size: 28px;
+                            font-family: 'Material Symbols Rounded';
+                            transform: rotateZ(90deg);
+                        }
+                        & .dpeddown {
+                            transform: rotateZ(0deg) !important;
+                        }
+                    }
+                    & .dp {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        & .answer {
+                            z-index: 1;
+                            font-size: 18px;
+                            & span {
+                                color: rgb(0, 106, 255);
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                    & .hidden {
+                        display: none;
+                    }
+                }
+            }
             & .prevClips {
                 display: flex;
                 flex-direction: row;

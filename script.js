@@ -1,5 +1,6 @@
 var oldselectionID = "Home";
 const fileList = ['Home.html','HowtoPlay.html','More.json','ChangeLog.json'];
+const nameList = ['Home','HowtoPlay','More','ChangeLog']
 const rawName = 'https://raw.githubusercontent.com/TheGreatMegalodon/Epic-Fight-Arena/refs/heads/master/'
 
 var toggleSelection = function(newID, scroll=undefined) {
@@ -20,14 +21,16 @@ var toggleSelection = function(newID, scroll=undefined) {
             top: scroll?targetElement.getBoundingClientRect().top - 100 : targetElement,
             behavior: "smooth"
         });
-    }, 100);
+    }, 200);
 }
 
 var checkFetch = function() {
     const currentUrl = window.location.href;
     const page = currentUrl.split('?')[1];
-    if (page == undefined) {
+    if (!nameList.includes(page)) {
         fetchFile('Home');
+    } else if (page.toLowerCase() == "faq") {
+        toggleSelection('Home', 'faqbloc');
     } else {
         toggleSelection(page);
     }
@@ -43,7 +46,7 @@ async function fetchFile(id) {
     const extension = file.split('.').pop().toLowerCase();
     const fetcher = document.getElementById('fetcher');
     if (extension === 'html') {  // ${rawName}
-        const htmlResponse = await fetch(`${rawName}info/${file}`);
+        const htmlResponse = await fetch(`info/${file}`);
         const htmlData = await htmlResponse.text();
         fetcher.innerHTML = htmlData;
     } else if (extension === 'json') {  // ${rawName}
@@ -94,7 +97,7 @@ async function createDataFOR(id) {
                 ).join('')}
                 `;
         case "More": // ${rawName}
-            const moreResponse = await fetch(`info/More.json`);
+            const moreResponse = await fetch(`${rawName}info/More.json`);
             const moreData = await moreResponse.json();
             return `
                 ${moreData.list.map(i => `
@@ -151,3 +154,9 @@ var copyText = function(id, text) {
         });
 }
 
+var makeDPD = function(id) {
+    const dpQ1arrow = document.getElementById(`${id}-arrow`);
+    const dpQ1 = document.getElementById(id);
+    dpQ1arrow.classList.toggle('dpeddown');
+    dpQ1.classList.toggle('hidden');
+}
