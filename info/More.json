@@ -1,3 +1,45 @@
 {
-    "name":"More"
+    "name":"Items",
+    "list": [
+        {
+            "name": "Potions",
+            "items": [
+                {
+                    "name": "",
+                    "image": "",
+                    "description": ""
+                },
+                {
+                    "name": "",
+                    "image": "",
+                    "description": ""
+                },
+                {
+                    "name": "",
+                    "image": "",
+                    "description": ""
+                },
+                {
+                    "name": "",
+                    "image": "",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "name": "Swords",
+            "items": [
+                {
+                    "name": "",
+                    "image": "",
+                    "description": ""
+                },
+                {
+                    "name": "",
+                    "image": "",
+                    "description": ""
+                }
+            ]
+        }
+    ]
 }

@@ -21,7 +21,7 @@ body {
     background-color: greenyellow;
     transition: ease 0.4s;
 }
-.mcfont {font-family: Minecraft; transform: translateY(1px);}
+.mcfont {font-family: Minecraft; transform: translateY(5px);}
 .golden {color: rgb(255, 229, 31)}
 .bold {font-weight: 600;}
 

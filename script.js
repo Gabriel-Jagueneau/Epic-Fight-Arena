@@ -45,10 +45,9 @@ async function fetchFile(id) {
     if (extension === 'html') {  // ${rawName}
         const htmlResponse = await fetch(`${rawName}info/${file}`);
         const htmlData = await htmlResponse.text();
-
         fetcher.innerHTML = htmlData;
     } else if (extension === 'json') {  // ${rawName}
-        const jsonResponse = await fetch(`${rawName}info/${file}`);
+        const jsonResponse = await fetch(`info/${file}`);
         const jsonData = await jsonResponse.json();
         id = id.split('.')[0];
         fetcher.innerHTML = `
@@ -96,10 +95,28 @@ async function createDataFOR(id) {
                 `;
         
         case "More": // ${rawName}
-            const moreResponse = await fetch(`${rawName}info/More.json`);
+            const moreResponse = await fetch(`info/More.json`);
             const moreData = await moreResponse.json();
             return `
-                ${moreData.name}
+                ${moreData.list.map(i => `
+                    <div class="carte">
+                        <div class="ClassName">
+                            <div class="name mcfont">${i.name} - Items number ${i.items.length}</div>
+                            <div class="dropdown">arrow_downward</div>
+                        </div>
+                        <div class="content">
+                            ${i.items.map(j => `
+                                <img src="${j.image}" alt="">
+                                <div class="infos">
+                                    <div class="secondaryTitle">${j.secondaryTitle}</div>
+                                    <div class="secondaryTitle" id="${j.name}description">${j.secondaryTitle}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                        
+                    </div>
+                    `
+                ).join('')}
                 `;
 
         default:

@@ -209,6 +209,32 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
+    & .content {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        gap: 20px;
+        margin-bottom: 60px;
+        & .carte {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background-color: rgba(44, 41, 41, 0.8);
+            border-radius: 15px;
+            gap: 10px;
+            & .ClassName {
+                display: flex;
+                justify-content: space-between;
+                & .name {
+                    font-size: 26px !important;
+                }
+                & .dropdown {
+                    font-size: 26px !important;
+                    font-family: 'Material Symbols Rounded';
+                }
+            }
+        }
+    }
 }
 
 & .ChangeLog {
