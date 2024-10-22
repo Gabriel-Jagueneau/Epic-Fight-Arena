@@ -1,32 +1,3 @@
-html {
-    user-select: none;
-    font-family: sans-serif;
-    overflow-x: hidden;
-}
-body {
-    display: flex;
-    background-color: rgb(105, 25, 25);
-    justify-content: center;
-}
-
-/*      format      */
-
-.itworkedwell {
-    background-color: greenyellow;
-    transition: ease 0.4s;
-}
-.mcfont {font-family: Minecraft; transform: translateY(1px);}
-.golden {color: rgb(255, 229, 31)}
-.bold {font-weight: 600;}
-
-/*      content      */
-
-#fetcher {
-    height: auto;
-    width: 100%;
-    color: rgb(233, 233, 233);
-}
-
 .logotot {
     position: relative;
     width: 100%;
@@ -137,10 +108,20 @@ body {
                     align-items: center;
                     justify-content: center;
                     width: 48%;
+                    &:hover {
+                        cursor: pointer;
+                        & img {
+                            transform: scale(1.05);
+                        }
+                        & .watch {
+                            transform: scale(1.05) translateY(20px);
+                        }
+                    }
                     & img {
                         height: 230px;
                         border-radius: 15px;
                         object-fit: cover;
+                        transition: ease 0.2s;
                     }
                     & .watch {
                         position: absolute;
@@ -151,11 +132,7 @@ body {
                         box-shadow: 0 0 10px rgb(0, 0, 0);
                         padding: 0px 15px;
                         border-radius: 15px;
-                        cursor: pointer;
                         transition: ease 0.2s;
-                        &:hover {
-                            transform: scale(1.05) translateY(17px);
-                        }
                     }
                 }
             }

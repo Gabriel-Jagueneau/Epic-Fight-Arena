@@ -1,3 +1,33 @@
+html {
+    user-select: none;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(105, 25, 25);
+    justify-content: center;
+}
+
+/*      format      */
+
+.itworkedwell {
+    background-color: greenyellow;
+    transition: ease 0.4s;
+}
+.mcfont {font-family: Minecraft; transform: translateY(1px);}
+.golden {color: rgb(255, 229, 31)}
+.bold {font-weight: 600;}
+
+/*      content      */
+
+#fetcher {
+    min-height: 100vh;
+    width: 100%;
+    color: rgb(233, 233, 233);
+}
+
 .topbar {
     z-index: 100;
     top: 0;
@@ -95,4 +125,14 @@
     0% {left: -100px}
     20% {left: 100%}
     to {left: 100%}
+}
+
+.linksnstuff {
+    display: flex;
+    width: 100%;
+}
+
+.copyrights {
+    display: flex;
+    width: 100%;
 }

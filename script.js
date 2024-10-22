@@ -43,7 +43,7 @@ async function fetchFile(id) {
     const extension = file.split('.').pop().toLowerCase();
     const fetcher = document.getElementById('fetcher');
     if (extension === 'html') {  // ${rawName}
-        const htmlResponse = await fetch(`${rawName}info/${file}`);
+        const htmlResponse = await fetch(`info/${file}`);
         const htmlData = await htmlResponse.text();
 
         fetcher.innerHTML = htmlData;
