@@ -93,7 +93,6 @@ async function createDataFOR(id) {
                     `
                 ).join('')}
                 `;
-        
         case "More": // ${rawName}
             const moreResponse = await fetch(`info/More.json`);
             const moreData = await moreResponse.json();
@@ -105,20 +104,22 @@ async function createDataFOR(id) {
                             <div class="dropdown">arrow_downward</div>
                         </div>
                         <div class="content">
-                            ${i.items.map(j => `
-                                <img src="${j.image}" alt="">
-                                <div class="infos">
-                                    <div class="secondaryTitle">${j.secondaryTitle}</div>
-                                    <div class="secondaryTitle" id="${j.name}description">${j.secondaryTitle}</div>
-                                </div>
-                            `).join('')}
+                            ${i.items.map(j => {
+                                const imageIdMatch = j.image.match(/\/([^\/]+)\.png$/);
+                                const imageId = imageIdMatch ? imageIdMatch[1] : 'No ID found';
+                                return `
+                                    <img src="${j.image}" alt="">
+                                    <div class="infos">
+                                        <div class="name">${j.name} ${imageId}</div>
+                                        <div class="description" id="${j.name}description"></div>
+                                    </div>
+                                `;
+                            }).join('')}
                         </div>
-                        
                     </div>
                     `
                 ).join('')}
-                `;
-
+            `;
         default:
             return "";
     }
