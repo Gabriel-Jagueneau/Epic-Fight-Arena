@@ -241,7 +241,7 @@ body {
         text-align: center;
         width: 90vw;
         margin-left: 5vw;
-        height: 80vh;
+        height: 90vh;
         flex-direction: column;
         font-size: 24px;
         & img {
@@ -252,11 +252,10 @@ body {
             font-size: 32px;
         }
         & .bottomcr {
-            position: absolute;
-            bottom: 40px;
-            left: 0;
-            width: 90vw;
-            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20vh;
             font-size: 16px;
         }
     }
