@@ -127,7 +127,7 @@ var copyText = function(id, text) {
                 cpy.style = "";
                 cpy.innerHTML = `
                 epicfightarena.ggs.gg
-                <img src="https://raw.githubusercontent.com/TheGreatMegalodon/Epic-Fight-Arena/refs/heads/master/images/EpicFight-logo.png" alt="">
+                <img src="${rawName}images/minecraft-icon.png" alt="">
                 `;
             }, 2000);
         });
