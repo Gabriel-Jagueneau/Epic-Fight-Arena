@@ -21,15 +21,15 @@
             position: relative;
             mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 100%, rgba(0, 0, 0, 0));
             z-index: 1;
-            width: 60%;
-            margin-left: 16px;
+            width: 65%;
+            
         }
         & .online {
             margin-top: 5px;
             color: rgb(141, 141, 141);
-            text-shadow: 0 0 20px rgba(0, 0, 0, 0);
+            text-shadow: none;
             font-size: 45px !important;
-            background: linear-gradient(180deg, #4a4a4a, #969696);
+            background: linear-gradient( #da8a2a, #a80d0d);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
