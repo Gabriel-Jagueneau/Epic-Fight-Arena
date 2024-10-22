@@ -51,13 +51,12 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
-
+    text-align: center;
     & .description {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 60%;
-        overflow: hidden;
         gap: 10px;
         & .text, iframe {
             border-radius: 10px;
@@ -168,14 +167,15 @@
                     &:hover {
                         cursor: pointer;
                         & img {
-                            transform: scale(1.05);
+                            transform: scale(1.03);
                         }
                         & .watch {
-                            transform: scale(1.05) translateY(20px);
+                            transform: scale(1.03) translateY(20px);
                         }
                     }
                     & img {
-                        height: 230px;
+                        height: auto;
+                        width: 100%;
                         border-radius: 15px;
                         object-fit: cover;
                         transition: ease 0.2s;
@@ -202,11 +202,10 @@
     flex-direction: column;
     width: 100%;
     align-items: center;
-
     & .steps {
         display: flex;
         flex-direction: column;
-        width: 40%;
+        width: 55%;
         gap: 25px;
         & .step {
             display: flex;
