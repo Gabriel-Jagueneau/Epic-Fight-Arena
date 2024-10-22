@@ -239,13 +239,15 @@ body {
         align-items: center;
         justify-content: center;
         text-align: center;
-        width: 100vw;
-        height: 100vh;
+        width: 90vw;
+        margin-left: 5vw;
+        margin-top: 10vh;
+        height: 80vh;
         flex-direction: column;
         font-size: 24px;
         & img {
             width: 300px;
-            margin-bottom: 60px;
+            margin-bottom: 30px;
         }
         & span {
             font-size: 32px;
@@ -254,8 +256,8 @@ body {
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 100vw;
-            height: 60px;
+            width: 90vw;
+            height: fit-content;
             font-size: 16px;
         }
     }
