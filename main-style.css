@@ -143,8 +143,11 @@ body {
     align-items: center;
     width: 100%;
     background-color: rgb(44, 41, 41);
-    & img {
+    & .images {
         width: 20%;
+        & img {
+            
+        }
     }
     & .links {
         display: flex;
@@ -156,6 +159,12 @@ body {
             flex-direction: row;
             padding: 25px;
             font-size: 16px;
+            cursor: pointer;
+            border-radius: 15px;
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.076);
+                text-decoration: underline;
+            }
         }
     }
     & .connexions {
@@ -166,6 +175,11 @@ body {
             border-radius: 90px;
             height: 45px;
             width: auto;
+            cursor: pointer;
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.076);
+                text-decoration: underline;
+            }
         }
     }
 }
