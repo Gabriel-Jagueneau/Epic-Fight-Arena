@@ -14,6 +14,9 @@ body {
     justify-content: center;
     color: rgb(233, 233, 233);
 }
+.tellrestricted {
+    display: none;
+}
 
 /*      format      */
 
@@ -224,4 +227,36 @@ body {
     justify-content: center;
     font-size: 14px;
     width: 100%;
+}
+
+@media only screen and (max-width: 1040px) {
+    .generalContainer {
+        display: none !important;
+    }
+    .tellrestricted {
+        position: relative;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        font-size: 24px;
+        & img {
+            width: 300px;
+            margin-bottom: 60px;
+        }
+        & span {
+            font-size: 32px;
+        }
+        & .bottomcr {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            height: 60px;
+            font-size: 16px;
+        }
+    }
 }
