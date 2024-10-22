@@ -113,7 +113,7 @@ var copyText = function(id, text) {
         .then(() => {
             cpy.style = "background-color: lime; color: black;";
             cpy.innerHTML = `
-                Copy
+                Copied
                 <div class="dld">done_all</div>
                 `;
         }).catch(() => {
@@ -126,10 +126,10 @@ var copyText = function(id, text) {
             setTimeout(() => {
                 cpy.style = "";
                 cpy.innerHTML = `
-                Copy
-                <div class="dld">sports_esports</div>
+                epicfightarena.ggs.gg
+                <img src="https://raw.githubusercontent.com/TheGreatMegalodon/Epic-Fight-Arena/refs/heads/master/images/EpicFight-logo.png" alt="">
                 `;
-            }, 1500);
+            }, 2000);
         });
 }
 

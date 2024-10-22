@@ -177,7 +177,7 @@
                 flex-direction: row;
                 gap: 20px;
                 align-items: center;
-                font-size: 22px;
+                font-size: 20px;
                 background-color: rgb(44, 41, 41);
                 border: solid 2px rgba(255, 229, 31, 0.2);
                 width: fit-content;
@@ -185,9 +185,14 @@
                 border-radius: 90px;
                 cursor: pointer;
                 transition: ease 0.2s;
+                & img {
+                    height: 32px;
+                    width: auto;
+                    border-radius: 90px;
+                }
                 & .dld {
                     font-family: 'Material Symbols Rounded';
-                    font-size: 30px;
+                    font-size: 26px;
                 }
                 &:hover {
                     background-color: rgb(255, 229, 31);
