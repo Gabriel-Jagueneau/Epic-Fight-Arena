@@ -253,7 +253,7 @@ body {
         }
         & .bottomcr {
             position: absolute;
-            bottom: 0;
+            bottom: 40px;
             left: 0;
             width: 90vw;
             height: fit-content;
