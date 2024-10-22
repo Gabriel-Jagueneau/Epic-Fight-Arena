@@ -10,7 +10,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin-top: 100px;
+        margin-top: 130px;
         width: 100%;
         height: fit-content;
         color: rgb(255, 229, 31);
@@ -38,10 +38,9 @@
     & img {
         position: absolute;
         z-index: -1;
-        width: calc(100% + 70px);
-        height: calc(100vh + 16px);
+        width: 100vw;
+        height: 150vh;
         top: 0px;
-        left: -8px;
         object-fit: cover;
         mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0));
     }
