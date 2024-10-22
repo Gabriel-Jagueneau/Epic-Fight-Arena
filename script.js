@@ -1,5 +1,5 @@
-var oldselectionID = "home";
-const fileList = ['home.html','howToPlay.html','more.json','changeLog.json'];
+var oldselectionID = "Home";
+const fileList = ['Home.html','HowtoPlay.html','More.json','ChangeLog.json'];
 const rawName = 'https://raw.githubusercontent.com/TheGreatMegalodon/Epic-Fight-Arena/refs/heads/master/'
 
 var toggleSelection = function(newID, scroll=undefined) {
@@ -27,7 +27,7 @@ var checkFetch = function() {
     const currentUrl = window.location.href;
     const page = currentUrl.split('?')[1];
     if (page == undefined) {
-        fetchFile('home');
+        fetchFile('Home');
     } else {
         toggleSelection(page);
     }
@@ -71,8 +71,8 @@ async function fetchFile(id) {
 
 async function createDataFOR(id) {
     switch(id) {
-        case "changeLog":  // ${rawName}
-            const clResponse = await fetch(`${rawName}info/changeLog.json`);
+        case "ChangeLog":  // ${rawName}
+            const clResponse = await fetch(`${rawName}info/ChangeLog.json`);
             const clData = await clResponse.json();
             return `
                 ${clData.logs.map(i => `
@@ -95,8 +95,8 @@ async function createDataFOR(id) {
                 ).join('')}
                 `;
         
-        case "more": // ${rawName}
-            const moreResponse = await fetch(`${rawName}info/more.json`);
+        case "More": // ${rawName}
+            const moreResponse = await fetch(`${rawName}info/More.json`);
             const moreData = await moreResponse.json();
             return `
                 ${moreData.name}
