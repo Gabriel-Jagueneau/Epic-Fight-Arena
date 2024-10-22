@@ -99,6 +99,7 @@ body {
             padding: 20px 10px;
             text-align: center;
             font-weight: 400;
+            font-size: 18px;
         }
         & iframe {
             width: 100%;
@@ -112,7 +113,9 @@ body {
             width: 100%;
             align-items: center;
             & .ttl {
-                font-size: 50px;
+                font-size: 55px;
+                color: rgb(255, 229, 31);
+                text-shadow: 0 0 20px rgb(0, 0, 0);
             }
             & .sttl {
                 display: flex;
@@ -127,11 +130,32 @@ body {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                gap: 5%;
+                justify-content: space-between;
                 & .sttl {
-                    width: 45%;
-                    & iframe {
-                        height: 200px;
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    justify-content: center;
+                    width: 48%;
+                    & img {
+                        height: 230px;
+                        border-radius: 15px;
+                        object-fit: cover;
+                    }
+                    & .watch {
+                        position: absolute;
+                        font-family: 'Material Symbols Rounded';
+                        transform: translateY(20px);
+                        font-size: 40px;
+                        background: linear-gradient(35deg, rgb(255,0,0), rgb(155, 10, 10));
+                        box-shadow: 0 0 10px rgb(0, 0, 0);
+                        padding: 0px 15px;
+                        border-radius: 15px;
+                        cursor: pointer;
+                        transition: ease 0.2s;
+                        &:hover {
+                            transform: scale(1.05) translateY(17px);
+                        }
                     }
                 }
             }
