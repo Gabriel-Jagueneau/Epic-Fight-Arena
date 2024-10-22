@@ -204,14 +204,14 @@
 
 }
 
-& .more {
+& .More {
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
 }
 
-& .changeLog {
+& .ChangeLog {
     display: flex;
     flex-direction: column;
     width: 100%;
