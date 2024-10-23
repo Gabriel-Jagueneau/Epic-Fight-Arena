@@ -140,12 +140,6 @@
                         & .answer {
                             z-index: 1;
                             font-size: 18px;
-                            & span {
-                                color: rgb(0, 106, 255);
-                                &:hover {
-                                    text-decoration: underline;
-                                }
-                            }
                         }
                     }
                     & .hidden {

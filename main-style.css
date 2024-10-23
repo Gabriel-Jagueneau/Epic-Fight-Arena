@@ -27,6 +27,7 @@ body {
 .mcfont {font-family: Minecraft; transform: translateY(5px);}
 .golden {color: rgb(255, 229, 31)}
 .bold {font-weight: 600;}
+.link {color: rgb(0, 106, 255);&:hover {text-decoration: underline;}}
 
 /*      content      */
 
@@ -179,7 +180,7 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
         width: 30%;
-        & .link {
+        & .linker {
             display: flex;
             flex-direction: row;
             padding: 25px;
@@ -191,7 +192,7 @@ body {
                 text-decoration: underline;
             }
         }
-        & .link::before {
+        & .linker::before {
             content: "";
             top: 0;
             right: 0;
@@ -241,7 +242,7 @@ body {
         text-align: center;
         width: 90vw;
         margin-left: 5vw;
-        height: 90vh;
+        height: 100vh;
         flex-direction: column;
         font-size: 24px;
         & img {

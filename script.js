@@ -1,5 +1,5 @@
 var oldselectionID = "Home";
-const fileList = ['Home.html','HowtoPlay.html','More.json','ChangeLog.json'];
+const fileList = ['Home.html','HowtoPlay.html','More.html','ChangeLog.json'];
 const nameList = ['Home','HowtoPlay','More','ChangeLog']
 const rawName = 'https://raw.githubusercontent.com/TheGreatMegalodon/Epic-Fight-Arena/refs/heads/master/'
 
@@ -15,9 +15,7 @@ var toggleSelection = function(newID, scroll=undefined) {
     fetchFile(newID);
     history.pushState(null, '', `?${newID}`);
 
-    setTimeout(() => {
-        scrollToElement(scroll);
-    }, 200);
+    setTimeout(() => {scrollToElement(scroll)}, 200);
 }
 
 function scrollToElement(id) {
@@ -72,29 +70,12 @@ async function fetchFile(id) {
                 <h1 class="mcfont" style="font-size: 40px;">${jsonData['name']}</h1>
                 <img src="${rawName}images/banners/home-banner.png" alt="">
             </div>
-
             <div class="content">
-                ${await createDataFOR(id)}
-            </div>
-
-        </section>
-        `;
-    } else {
-        return;
-    }
-}
-
-async function createDataFOR(id) {
-    switch(id) {
-        case "ChangeLog":  // ${rawName}
-            const clResponse = await fetch(`${rawName}info/ChangeLog.json`);
-            const clData = await clResponse.json();
-            return `
-                ${clData.logs.map(i => `
-                    <div class="conte ${i.important?'important':''} ${clData.logs.indexOf(i) == 0?'latest':''}">
+                ${jsonData.logs.map(i => `
+                    <div class="conte ${i.important?'important':''} ${jsonData.logs.indexOf(i) == 0?'latest':''}">
                         <div class="maininfo mcfont">
                             <div class="date">${i.date}</div>-<div class="date">${i.update}</div>
-                            ${clData.logs.indexOf(i) == 0?'<div class="latest">Latest</div>':''}
+                            ${jsonData.logs.indexOf(i) == 0?'<div class="latest">Latest</div>':''}
                         </div>
                         <div class="informations">
                             <div class="globalTitle">${i.globalTitle}</div>
@@ -108,36 +89,11 @@ async function createDataFOR(id) {
                     </div>
                     `
                 ).join('')}
-                `;
-        case "More": // ${rawName}
-            const moreResponse = await fetch(`${rawName}info/More.json`);
-            const moreData = await moreResponse.json();
-            return `
-                ${moreData.list.map(i => `
-                    <div class="carte">
-                        <div class="ClassName">
-                            <div class="name mcfont">${i.name} - Items number ${i.items.length}</div>
-                            <div class="dropdown">arrow_downward</div>
-                        </div>
-                        <div class="content">
-                            ${i.items.map(j => {
-                                const imageIdMatch = j.image.match(/\/([^\/]+)\.png$/);
-                                const imageId = imageIdMatch ? imageIdMatch[1] : 'No ID found';
-                                return `
-                                    <img src="${j.image}" alt="">
-                                    <div class="infos">
-                                        <div class="name">${j.name} ${imageId}</div>
-                                        <div class="description" id="${j.name}description"></div>
-                                    </div>
-                                `;
-                            }).join('')}
-                        </div>
-                    </div>
-                    `
-                ).join('')}
-            `;
-        default:
-            return "";
+            </div>
+        </section>
+        `;
+    } else {
+        return;
     }
 }
 
@@ -146,23 +102,14 @@ var copyText = function(id, text) {
     navigator.clipboard.writeText(text)
         .then(() => {
             cpy.style = "background-color: lime; color: black;";
-            cpy.innerHTML = `
-                Copied
-                <div class="dld">done_all</div>
-                `;
+            cpy.innerHTML = `Copied<div class="dld">done_all</div>`;
         }).catch(() => {
             cpy.style = "background-color: red;";
-            cpy.innerHTML = `
-                Error
-                <div class="dld">error</div>
-                `;
+            cpy.innerHTML = `Error<div class="dld">error</div>`;
         }).finally(() => {
             setTimeout(() => {
                 cpy.style = "";
-                cpy.innerHTML = `
-                epicfightarena.ggs.gg
-                <img src="${rawName}images/minecraft-icon.png" alt="">
-                `;
+                cpy.innerHTML = `epicfightarena.ggs.gg<img src="${rawName}images/minecraft-icon.png" alt="">`;
             }, 2000);
         });
 }
