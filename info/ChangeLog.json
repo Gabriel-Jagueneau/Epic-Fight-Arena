@@ -74,8 +74,158 @@
             ]
         },
         {
+            "date": "11/11/2023",
+            "update": "Epic Fight Arena 1.6",
+            "important": false,
+
+            "globalTitle": "BR changes",
+            "content": [
+                {
+                    "secondaryTitle": "",
+                    "changes": [
+                        "Various map changes",
+                        "Leviathan axe doesn't teleport you to 🇧🇷 anymore",
+                        "Vampire dagger crash fix",
+                        "More loot",
+                        "When a player joins the server and a match is ongoing, they will automatically be set to spectator mode and teleported to a random player in Battle Royale (no more dying to the zone over and over)",
+                        "Added NPC's (Cows)",
+                        "Removed various food items to reduce inventory clutter",
+                        "Reduced chance of stews",
+                        "Reduced chance of alcohol",
+                        "More zone centers",
+                        "Made mythicals less common",
+                        "Obsidian Longsword nerf",
+                        "Fireball removed",
+                        "Wither skull added [Throwable]",
+                        "Creeper egg Added [Throwable]",
+                        "Axe buff"
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "23/09/2023",
+            "update": "Epic Fight Arena 1.5",
+            "important": false,
+
+            "globalTitle": "BR changes",
+            "content": [
+                {
+                    "secondaryTitle": "",
+                    "changes": [
+                        "Map overhaul",
+                        "Serpent blade",
+                        "Obsidian Longsword",
+                        "Shield Veil",
+                        "Vagabond Armor",
+                        "Viking armor nerf",
+                        "Special armors now have durability",
+                        "Axe buff (+0.2 speed)",
+                        "Greatsword nerf (-1 dmg)",
+                        "More Zone endgame centers",
+                        "More spawn points",
+                        "Warpick nerf",
+                        "More loot, more chests"
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "17/09/2023",
+            "update": "Epic Fight Arena 1.4",
+            "important": false,
+
+            "globalTitle": "BR changes",
+            "content": [
+                {
+                    "secondaryTitle": "",
+                    "changes": [
+                        "added frying pan (mythical)",
+                        "added war pick (found in cave)",
+                        "added vampire dagger (mythical)",
+                        "added swoozie",
+                        "buffed axes (more attack speed)",
+                        "buffed daggers (more damage)",
+                        "less arrows",
+                        "mythicals less common",
+                        "greatswords less common",
+                        "fixed more empty chests",
+                        "added cave chest",
+                        "more zone centers (volcano, tents, middle of a lake, cave, castle, naginata house)",
+                        "added mansion (close to center of the map)"
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "16/09/2023",
+            "update": "Epic Fight Arena 1.3",
+            "important": false,
+
+            "globalTitle": "BR changes",
+            "content": [
+                {
+                    "secondaryTitle": "",
+                    "changes": [
+                        "fireball spellbook (press Q to activate, summons a slow moving fireball wherever you're looking)",
+                        "Leviathan Axe, very slow axe, applies slowness upon hit (ice weapon)",
+                        "berserker armor set (hunger I while wearing any piece, but +1 impact per piece)",
+                        "buffed alcohol, removed teag",
+                        "border warning (there's now a message that warns players too close to the border)",
+                        "new textures: (mandatory resourcepack for the server)",
+                        "dragonslayer (bigger, slower, more hard hitting greatsword)",
+                        "hell blade animation",
+                        "naginata (spear but slower, more damage)",
+                        "wither sword (gives wither upon hit, short delay between the effects)",
+                        "beverage textures",
+                        "less arrows, more potency (there are less arrows in the game but now each of them have deadly effects, no more spam, each shot matters!)",
+                        "mythical loot spawns in every chests (mythical chest is a loot table with only 1 guaranteed mythical item)"
+                    ]
+                },
+                {
+                    "secondaryTitle": "Chances for mythical in every chest:",
+                    "changes": [
+                        "common: <span class='bold'>1 in 300</span>",
+                        "rare: <span class='bold'>1 in 140</span>",
+                        "epic: <span class='bold'>1 in 40</span>",
+                        "legendary: <span class='bold'>1 in 20</span>"
+                    ]
+                }
+            ]
+        },
+        {
+            "date": "10/09/2023",
+            "update": "Epic Fight Arena 1.2",
+            "important": false,
+
+            "globalTitle": "BR changes",
+            "content": [
+                {
+                    "secondaryTitle": "",
+                    "changes": [
+                        "fix players stuck in lobby getting hit by the border",
+                        "kills leaderboard",
+                        "fix border resetting",
+                        "fix killstreaks",
+                        "fix players rejoining",
+                        "add /trigger spectate",
+                        "fix all the chests missing loot",
+                        "made diamond weapons & armor less common",
+                        "made enchanted gold armor less strong",
+                        "remove step from all loot tables",
+                        "made greatswords rarer, especially diamond & gold",
+                        "made hyper vitality rarer (only spawn in legendary & epic chests)",
+                        "made crossbows & bows rarer",
+                        "removed unnecessary things from the naginata loot table",
+                        "fix missing loot",
+                        "made players unable to switch to mining mode"
+                    ]
+                }
+            ]
+        },
+        {
             "date": "10/08/2024",
-            "update": "pic Fight Arena 1.1",
+            "update": "Epic Fight Arena 1.1",
             "important": false,
 
             "globalTitle": "BR changes",
@@ -85,7 +235,20 @@
                     "changes": [
                         "players spawn higher up",
                         "more random spots so players don't spawn in the same place",
-                        "fixed items not clearing"
+                        "fixed items not clearing",
+                        "fixed skills not clearing",
+                        "more structures",
+                        "finished volcano",
+                        "players start with: guard",
+                        "added more loot",
+                        "made castle better",
+                        "less food options, LESS WHEAT more meat (no more inventory clutter)",
+                        "made GS less common",
+                        "fixed players not able to right click sign",
+                        "fixed empty loot",
+                        "you can now find horses and ride them (they spawn already tamed and wearing saddles)",
+                        "added alcohol",
+                        "added kill streaks (Player is on a 5 kill streak!)"
                     ]
                 }
             ]
@@ -95,7 +258,7 @@
             "update": "1.0",
             "important": true,
 
-            "globalTitle": "Started the game",
+            "globalTitle": "Created the game mode.",
             "content": []
         }
     ]

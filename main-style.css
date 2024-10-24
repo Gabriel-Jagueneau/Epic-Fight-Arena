@@ -1,5 +1,5 @@
 html {
-    user-select: none;
+    user-select: none !important;
     font-family: sans-serif;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -26,6 +26,7 @@ body {
 }
 .mcfont {font-family: Minecraft; transform: translateY(5px);}
 .golden {color: rgb(255, 229, 31)}
+.reden {color: rgb(255, 31, 31)}
 .bold {font-weight: 600;}
 .link {color: rgb(0, 106, 255);&:hover {text-decoration: underline;}}
 

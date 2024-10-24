@@ -22,7 +22,7 @@
             mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 100%, rgba(0, 0, 0, 0));
             z-index: 1;
             width: 65%;
-            
+            height: auto !important;
         }
         & .online {
             margin-top: 5px;
@@ -39,7 +39,6 @@
         position: absolute;
         z-index: -1;
         width: 100vw;
-        height: 150vh;
         top: 0px;
         object-fit: cover;
         mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0));
@@ -52,31 +51,86 @@
     width: 100%;
     align-items: center;
     text-align: center;
-    & .description {
+    & .whole {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 60%;
         gap: 10px;
-        & .text, iframe {
-            border-radius: 10px;
-            height: auto;
+        & .description {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            & .text {
+                width: 100%;
+                background-color: rgba(44, 41, 41, 0.8);
+                padding: 20px;
+                text-align: start;
+                font-weight: 400;
+                font-size: 20px;
+                border-radius: 15px;
+                transform: none;
+            }
+            & iframe {
+                width: 100%;
+                height: 450px;
+                border-radius: 15px;
+            }
         }
-        & .text {
-            width: calc(100% - 20px);
-            background-color: rgba(44, 41, 41, 0.8);
-            padding: 20px 10px;
-            text-align: center;
-            font-weight: 400;
-            font-size: 18px;
-        }
-        & iframe {
+        & .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             width: 100%;
-            height: 450px;
+            gap: 15px;
+            & .contain {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+                border-radius: 15px;
+                width: calc(100% - 40px);
+                background-color: rgba(44, 41, 41, 0.8);
+                cursor: pointer;
+                & .sepa {
+                    padding: 1px;
+                    width: 98%;
+                    margin-left: 1%;
+                    background-color: rgba(255, 229, 31, 0.6);
+                }
+                & .question {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    & .name {
+                        font-size: 26px;
+                    }
+                    & .dropdown {
+                        transition: ease 0.2s;
+                        font-size: 28px;
+                        font-family: 'Material Symbols Rounded';
+                        transform: rotateZ(90deg);
+                    }
+                    & .dpeddown {
+                        transform: rotateZ(0deg) !important;
+                    }
+                }
+                & .dp {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    & .answer {
+                        z-index: 1;
+                        font-size: 18px;
+                    }
+                }
+                & .hidden {
+                    display: none;
+                }
+            }
         }
         & .cotw {
             margin-top: 60px;
-            margin-bottom: 60px;
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -91,61 +145,13 @@
                 flex-direction: column;
                 align-items: center;
                 font-size: 25px;
-                margin-bottom: 40px;
                 width: 100%;
                 gap: 10px;
             }
-            & .container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+            & iframe {
                 width: 100%;
-                gap: 15px;
-                & .contain {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 15px;
-                    padding: 20px;
-                    border-radius: 15px;
-                    width: calc(100% - 40px);
-                    background-color: rgba(44, 41, 41, 0.8);
-                    cursor: pointer;
-                    & .sepa {
-                        padding: 1px;
-                        width: 98%;
-                        margin-left: 1%;
-                        background-color: rgba(255, 229, 31, 0.6);
-                    }
-                    & .question {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-                        & .name {
-                            font-size: 26px;
-                        }
-                        & .dropdown {
-                            transition: ease 0.2s;
-                            font-size: 28px;
-                            font-family: 'Material Symbols Rounded';
-                            transform: rotateZ(90deg);
-                        }
-                        & .dpeddown {
-                            transform: rotateZ(0deg) !important;
-                        }
-                    }
-                    & .dp {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 15px;
-                        & .answer {
-                            z-index: 1;
-                            font-size: 18px;
-                        }
-                    }
-                    & .hidden {
-                        display: none;
-                    }
-                }
+                height: 450px;
+                border-radius: 15px;
             }
             & .prevClips {
                 display: flex;
@@ -190,6 +196,79 @@
         }
         & .aboutthedevs {
             display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            gap: 15px;
+            & .title {
+                display: flex;
+                position: relative;
+                & img {
+                    width: 100%;
+                    border-radius: 15px;
+                    height: 250px;
+                    object-fit: cover;
+                    object-position: 0px -130px;
+                }
+                & .name {
+                    display: flex;
+                    top: 0;
+                    left: 0;
+                    align-items: center;
+                    justify-content: center;
+                    height: 50%;
+                    width: 100%;
+                    position: absolute;
+                    font-size: 55px;
+                    color: rgb(255, 229, 31);
+                    text-shadow: 0 0 20px rgb(0, 0, 0);
+                }
+            }
+            & .globaldescription {
+                display: flex;
+                padding: 20px;
+                background-color: rgba(44, 41, 41, 0.8);
+                border-radius: 15px;
+                font-weight: 400;
+                font-size: 20px;
+            }
+            & .normal {
+                flex-direction: row;
+                background-color: rgba(62, 24, 24, 0.8);
+                & .desc {
+                    align-items: start;
+                    text-align: start;
+                }
+            }
+            & .reverse {
+                flex-direction: row-reverse;
+                background-color: rgba(62, 56, 24, 0.8);
+                & .desc {
+                    align-items: end;
+                    text-align: end;
+                }
+            }
+            & .personaldesc {
+                display: flex;
+                gap: 20px;
+                padding: 10px;
+                border-radius: 15px;
+                & img {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 15px;
+                }
+                & .desc {
+                    display: flex;
+                    font-size: 20px;
+                    gap: 15px;
+                    flex-direction: column;
+                    & .name {
+                        font-size: 28px;
+                    }
+                }
+            }
         }
     }
 }
@@ -329,7 +408,7 @@
                     font-size: 20px;
                     color: aqua;
                     background-color: rgba(0, 255, 255, 0.1);
-                    border-radius: 10px;
+                    border-radius: 15px;
                     padding: 6px 10px 2px 12px;
                 }
             }
