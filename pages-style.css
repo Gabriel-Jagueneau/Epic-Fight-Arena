@@ -62,7 +62,7 @@
             flex-direction: column;
             gap: 20px;
             & .text {
-                width: 100%;
+                width: calc(100% - 40px);
                 background-color: rgba(44, 41, 41, 0.8);
                 padding: 20px;
                 text-align: start;
