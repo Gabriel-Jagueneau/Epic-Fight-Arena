@@ -136,7 +136,7 @@ body {
 
 #fetcher {
     min-height: 110vh;
-    width: 100%;
+    width: 100vw;
 }
 
 .linksnstuff, .copyrights {
@@ -153,11 +153,13 @@ body {
     height: fit-content;
     overflow: hidden;
     & .imger {
-        object-position: -50px -300px;
+        object-position: 0px -300px;
         object-fit: cover;
         position: absolute;
         z-index: -1;
         filter: brightness(0.7);
+        width: 100vw;
+        height: fit-content;
     }
 }
 

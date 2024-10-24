@@ -209,7 +209,7 @@
                     border-radius: 15px;
                     height: 250px;
                     object-fit: cover;
-                    object-position: 0px -130px;
+                    object-position: 0px 50%;
                 }
                 & .name {
                     display: flex;
@@ -281,7 +281,7 @@
     & .steps {
         display: flex;
         flex-direction: column;
-        width: 55%;
+        width: 60%;
         gap: 25px;
         & .step {
             display: flex;
