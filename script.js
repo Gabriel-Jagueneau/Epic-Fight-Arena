@@ -4,18 +4,38 @@ const nameList = ['Home','HowtoPlay','More','ChangeLog']
 const rawName = 'https://raw.githubusercontent.com/TheGreatMegalodon/Epic-Fight-Arena/refs/heads/master/'
 
 var toggleSelection = function(newID, scroll=undefined) {
-    
     const oldItem = document.getElementById(oldselectionID);
     const newItem = document.getElementById(newID);
-
     oldItem.classList.toggle('selected');
     newItem.classList.toggle('selected');
-
     oldselectionID = newID;
     fetchFile(newID);
     history.pushState(null, '', `?${newID}`);
+    setTimeout(() => {scrollToElement(scroll)}, 100);
+}
 
-    setTimeout(() => {scrollToElement(scroll)}, 200);
+var copyText = function(id, text) {
+    const cpy = document.getElementById(id);
+    navigator.clipboard.writeText(text)
+        .then(() => {
+            cpy.style = "background-color: lime; color: black;";
+            cpy.innerHTML = `Copied<div class="dld">done_all</div>`;
+        }).catch(() => {
+            cpy.style = "background-color: red;";
+            cpy.innerHTML = `Error<div class="dld">error</div>`;
+        }).finally(() => {
+            setTimeout(() => {
+                cpy.style = "";
+                cpy.innerHTML = `epicfightarena.ggs.gg<img src="${rawName}images/minecraft-icon.png" alt="">`;
+            }, 2000);
+        });
+}
+
+var makeDPD = function(id) {
+    const dpQ1arrow = document.getElementById(`${id}-arrow`);
+    const dpQ1 = document.getElementById(id);
+    dpQ1arrow.classList.toggle('dpeddown');
+    dpQ1.classList.toggle('hidden');
 }
 
 function scrollToElement(id) {
@@ -96,28 +116,4 @@ async function fetchFile(id) {
     } else {
         return;
     }
-}
-
-var copyText = function(id, text) {
-    const cpy = document.getElementById(id);
-    navigator.clipboard.writeText(text)
-        .then(() => {
-            cpy.style = "background-color: lime; color: black;";
-            cpy.innerHTML = `Copied<div class="dld">done_all</div>`;
-        }).catch(() => {
-            cpy.style = "background-color: red;";
-            cpy.innerHTML = `Error<div class="dld">error</div>`;
-        }).finally(() => {
-            setTimeout(() => {
-                cpy.style = "";
-                cpy.innerHTML = `epicfightarena.ggs.gg<img src="${rawName}images/minecraft-icon.png" alt="">`;
-            }, 2000);
-        });
-}
-
-var makeDPD = function(id) {
-    const dpQ1arrow = document.getElementById(`${id}-arrow`);
-    const dpQ1 = document.getElementById(id);
-    dpQ1arrow.classList.toggle('dpeddown');
-    dpQ1.classList.toggle('hidden');
 }
