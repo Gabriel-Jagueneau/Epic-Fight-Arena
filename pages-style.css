@@ -57,6 +57,11 @@
         align-items: center;
         width: 60%;
         gap: 10px;
+        & .ttl {
+            font-size: 55px;
+            color: rgb(255, 229, 31);
+            text-shadow: 0 0 20px rgb(0, 0, 0);
+        }
         & .description {
             display: flex;
             flex-direction: column;
@@ -135,11 +140,6 @@
             flex-direction: column;
             width: 100%;
             align-items: center;
-            & .ttl {
-                font-size: 55px;
-                color: rgb(255, 229, 31);
-                text-shadow: 0 0 20px rgb(0, 0, 0);
-            }
             & .sttl {
                 display: flex;
                 flex-direction: column;
