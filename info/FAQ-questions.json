@@ -1,0 +1,30 @@
+[
+    {
+        "Q": "What is EFA?",
+        "A": "EFA is an Epic Fight mod PvP server, with many game modes and mini-games, similar to Hypixel, EFA is built from the ground up with 100% original assets and code. No plugins or additional mods, only Epic Fight with our custom integrated datapacks which make everything work."
+    },
+    {
+        "Q": "Is the server 24/7?",
+        "A": "Yes, the server is and always will be online 24/7!"
+    },
+    {
+        "Q": "Can I join if I don't have an official Minecraft account?",
+        "A": "Yes, cracked (offline) users which do not own an official Minecraft account are able to join the server."
+    },
+    {
+        "Q": "Why can't I see my skin?",
+        "A": "The server is set to offline mode, meaning players without official Minecraft accounts are able to join. This also means you cannot see skins, however the Offline Skins mod fixes this issue! <span onclick=§window.open('https://www.curseforge.com/minecraft/mc-mods/offlineskins/files/4592954', '_blank');§>See Here</span><br><br>We made this decision due to a major number of our players being offline users, we wouldn't want to leave them out. "
+    },
+    {
+        "Q": "Will there be American/Asian servers?",
+        "A": "Yes, we are currently working on expanding our servers, however we are still quite small and it's difficult financially managing several servers at once."
+    },
+    {
+        "Q": "I can't join the server!",
+        "A": "Join our Discord, we are here to help you! <span class=§link§ onclick=§window.open('https://discord.gg/CbNbyCW98x', '_blank');§>Join Here</span>"
+    },
+    {
+        "Q": "Want to report a bug?",
+        "A": "contact <span class=§golden§>lexagon@epicfightarena.com</span> or join the Discord <span class=§link§ onclick=§window.open('https://discord.gg/CbNbyCW98x', '_blank');§>Join Here</span>"
+    }
+]

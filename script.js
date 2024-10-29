@@ -38,6 +38,25 @@ var makeDPD = function(id) {
     dpQ1.classList.toggle('hidden');
 }
 
+async function makeFAQ() {
+    const container = document.getElementById('faq-load');
+    const jsonResponse = await fetch(`info/FAQ-questions.json`);
+    const data = await jsonResponse.json();
+    container.innerHTML = `
+        ${data.map((el, index) => `
+            <div class="contain">
+                <div class="question" onclick="makeDPD('dp-Q${index}')">
+                    <div class="name mcfont">${el.Q}</div>
+                    <div class="dropdown" id="dp-Q${index}-arrow">arrow_downward</div>
+                </div>
+                <div id="dp-Q${index}" class="dp hidden">
+                    <div class="sepa"></div>
+                    <div class="answer">${el.A.replace(/§/g, '"')}</div>    
+                </div>
+            </div>
+        `).join('')}`;
+}
+
 function scrollToElement(id) {
     if (!id) {
         window.scrollTo({
@@ -81,6 +100,7 @@ async function fetchFile(id) {
         const htmlResponse = await fetch(`info/${file}`);
         const htmlData = await htmlResponse.text();
         fetcher.innerHTML = htmlData;
+        if (file == 'Home.html') makeFAQ();
     } else if (extension === 'json') {  // ${rawName}
         const jsonResponse = await fetch(`info/${file}`);
         const jsonData = await jsonResponse.json();
