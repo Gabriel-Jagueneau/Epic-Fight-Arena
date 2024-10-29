@@ -1,0 +1,53 @@
+@media only screen and (width < 1015px) {
+    .topbar {
+        height: 70px;
+        justify-content: space-between;
+        padding: 0;
+        width: calc(100%);
+        & div {
+            & div {
+                margin: 0;
+                font-size: 16px;
+                padding: 6px 8px;
+                font-weight: 500;
+            }
+            & .selected {
+                margin: 0;
+                padding: 8px 10px;
+                font-size: 18px;
+            }
+        }
+        & .logo img {
+            display: none;
+        }
+        & .socials {
+            gap: 5px;
+            margin-right: 10px;
+            & img {
+                height: 35px;
+                border-radius: 90px;
+            }
+        }
+        & .pwu, .cotw {
+            display: none;
+        }
+    }
+    
+    .generalBellow .imger {
+        object-position: -300px 0px;
+        height: 100%;
+    }
+    
+    .linksnstuff {
+        & .images {
+            width: 30%;
+        }
+        & .links .linker {
+            padding: 15px;
+        }
+    }
+    
+    .copyrights {
+        margin-bottom: 100px;
+    }
+}

@@ -115,7 +115,7 @@ async function fetchFile(id) {
                 ${jsonData.logs.map(i => `
                     <div class="conte ${i.important?'important':''} ${jsonData.logs.indexOf(i) == 0?'latest':''}">
                         <div class="maininfo mcfont">
-                            <div class="date">${i.date}</div>-<div class="date">${i.update}</div>
+                            <div class="date">${i.date}</div> <span>-</span> <div class="date">${i.update}</div>
                             ${jsonData.logs.indexOf(i) == 0?'<div class="latest">Latest</div>':''}
                         </div>
                         <div class="informations">

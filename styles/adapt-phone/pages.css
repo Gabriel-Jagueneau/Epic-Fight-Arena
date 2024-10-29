@@ -1,0 +1,190 @@
+@media only screen and (width < 1015px) {
+    .logotot {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        & h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 100px;
+            width: 100%;
+            height: fit-content;
+            color: rgb(255, 229, 31);
+            text-shadow: 0 0 20px rgb(0, 0, 0);
+            font-size: 35px !important;
+            & img {
+                height: auto;
+                position: relative;
+                mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 100%, rgba(0, 0, 0, 0));
+                z-index: 1;
+                width: 90%;
+                height: auto !important;
+            }
+            & .below1 {
+                width: 50% !important;
+            }
+            & .below2 {
+                width: 30% !important;
+            }
+        }
+        & img {
+            position: absolute;
+            z-index: -1;
+            width: 200vw;
+            top: 0px;
+            object-fit: cover;
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0));
+        }
+    }
+
+    & .home {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        & .whole {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            gap: 10px;
+            & .ttl {
+                font-size: 45px;
+                color: rgb(255, 229, 31);
+                text-shadow: 0 0 20px rgb(0, 0, 0);
+            }
+            & .description {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                & .text {
+                    width: calc(100% - 40px);
+                    background-color: rgba(44, 41, 41, 0.8);
+                    padding: 20px;
+                    text-align: start;
+                    font-weight: 400;
+                    font-size: 17px;
+                    border-radius: 15px;
+                    transform: none;
+                }
+                & iframe {
+                    width: 100%;
+                    height: 350px;
+                    border-radius: 15px;
+                }
+            }
+            & .faq .contain {
+                padding: 20px;
+                & .question { 
+                    align-items: center;
+                    & .name {
+                        font-size: 22px;
+                    }
+                    & .dropdown {   
+                        height: fit-content;
+                    }
+                }
+                & .dp .answer {
+                    font-size: 16px;
+                }
+            }
+            & .cotw {
+                & iframe {
+                    height: 350px;
+                }
+                & .prevClips {
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: none;
+                    gap: 30px;
+                    & .sttl {
+                        width: 94%;
+                    }
+                }
+            }
+            & .aboutthedevs {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin-top: 60px;
+                margin-bottom: 60px;
+                gap: 15px;
+                & .title {
+                    overflow: hidden;
+                    height: 250px;
+                    border-radius: 15px;
+                    & img {
+                        height: 300px;
+                        object-position: -50px 0px;
+                    }
+                    & .name {
+                        top: 5%;
+                        left: 5%;
+                        height: fit-content;
+                        width: 90%;
+                        font-size: 45px;
+                    }
+                }
+                & .globaldescription {
+                    font-size: 17px;
+                }
+                & .personaldesc {
+                    & img {
+                        width: 50px;
+                        height: 50px;
+                    }
+                    & .desc {
+                        font-size: 17px;
+                        & .name {
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    & .htp .steps {
+        align-items: center;
+        width: 90%;
+        & .step {
+            flex-direction: column;
+            align-items: center;
+            width: calc(100% - 60px);
+            & .top {
+                align-self: normal;
+            }
+        }
+    }
+    
+    & .ChangeLog .content {
+        width: 90%;
+        & .conte {
+            & .maininfo {
+                gap: 6px;
+                font-size: 22px;
+                flex-direction: column;
+                margin-bottom: 10px;
+                & span {
+                    display: none;
+                }
+            }
+            & .informations {
+                & .globalTitle {
+                    font-size: 20px;
+                }
+                & .secondaryTitle {
+                    font-size: 17px;
+                    margin-top: 6px;
+                }
+            }
+        }
+    }
+}
+

@@ -24,16 +24,6 @@
             width: 65%;
             height: auto !important;
         }
-        & .online {
-            margin-top: 5px;
-            color: rgb(141, 141, 141);
-            text-shadow: none;
-            font-size: 45px !important;
-            background: linear-gradient( #da8a2a, #a80d0d);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
     }
     & img {
         position: absolute;
@@ -97,6 +87,7 @@
                 width: calc(100% - 40px);
                 background-color: rgba(44, 41, 41, 0.8);
                 cursor: pointer;
+                text-align: start;
                 & .sepa {
                     padding: 1px;
                     width: 98%;
@@ -109,6 +100,7 @@
                     justify-content: space-between;
                     & .name {
                         font-size: 26px;
+                        width: 100%;
                     }
                     & .dropdown {
                         transition: ease 0.2s;

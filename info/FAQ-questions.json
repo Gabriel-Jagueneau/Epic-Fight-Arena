@@ -13,7 +13,7 @@
     },
     {
         "Q": "Why can't I see my skin?",
-        "A": "The server is set to offline mode, meaning players without official Minecraft accounts are able to join. This also means you cannot see skins, however the Offline Skins mod fixes this issue! <span onclick=§window.open('https://www.curseforge.com/minecraft/mc-mods/offlineskins/files/4592954', '_blank');§>See Here</span><br><br>We made this decision due to a major number of our players being offline users, we wouldn't want to leave them out. "
+        "A": "The server is set to offline mode, meaning players without official Minecraft accounts are able to join. This also means you cannot see skins, however the Offline Skins mod fixes this issue! <span class=§link§ onclick=§window.open('https://www.curseforge.com/minecraft/mc-mods/offlineskins/files/4592954', '_blank');§>See Here</span><br><br>We made this decision due to a major number of our players being offline users, we wouldn't want to leave them out. "
     },
     {
         "Q": "Will there be American/Asian servers?",
