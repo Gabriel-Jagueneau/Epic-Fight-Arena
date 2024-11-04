@@ -16,6 +16,7 @@ var toggleSelection = function(newID, scroll=undefined) {
 
 var copyText = function(id, text) {
     const cpy = document.getElementById(id);
+    const oldInner = cpy.innerHTML;
     navigator.clipboard.writeText(text)
         .then(() => {
             cpy.style = "background-color: lime; color: black;";
@@ -26,7 +27,7 @@ var copyText = function(id, text) {
         }).finally(() => {
             setTimeout(() => {
                 cpy.style = "";
-                cpy.innerHTML = `epicfightarena.ggs.gg<img src="${rawName}images/minecraft-icon.png" alt="">`;
+                cpy.innerHTML = oldInner;
             }, 2000);
         });
 }
