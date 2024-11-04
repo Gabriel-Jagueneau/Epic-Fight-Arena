@@ -379,6 +379,7 @@
         }
         & .latest {
             border: solid 2px rgba(0, 255, 255, 0.7);
+            background-color: rgb(43, 55, 55) !important;
         }
         & .conte {
             display: flex;
@@ -430,6 +431,7 @@
                     & .change {
                         display: flex;
                         flex-direction: row;
+                        align-items: center;
                         gap: 6px;
                         & .tpe {
                             font-weight: 600;

@@ -2,6 +2,61 @@
     "name":"Change Log",
     "logs": [
         {
+            "date": "01/11/2024",
+            "update": "Epic Fight Arena",
+            "important": true,
+
+            "globalTitle": "Soulslike update",
+            "content": [
+                {
+                    "secondaryTitle": "What's New?",
+                    "changes": [
+                        "<span class='bold'>8</span> New maps!!",
+                        "<span class='bold'>3</span> New classes",
+                        "<span class='bold'>2</span> New gamemodes: <span class='bold'>Elimination</span> & <span class='bold'>Protect the Panda</span>",
+                        "New XP leveling system",
+                        "Massive balance improvements to every class",
+                        "<span class='bold'>18</span> New movesets",
+                        "New healing system",
+                        "Overhauled combat: slower weapons, timing attacks is crucial"
+                    ]
+                },
+                {
+                    "secondaryTitle": "Classes",
+                    "changes": [
+                        "<span class='bold'>Viking</span>: New moveset, new ability - Dash",
+                        "<span class='bold'>Gunslinger</span>: Complete rework, can headshot now",
+                        "<span class='bold'>Archer</span>: Improved ability",
+                        "<span class='bold'>Assassin</span>: New moveset, new dodge, more skillful",
+                        "<span class='bold'>Berserker</span>: Reworked ability, better moveset",
+                        "<span class='bold'>Brawler</span>: Improved ability, new moveset",
+                        "<span class='bold'>Knight</span>: New ability - War Cry, 2 new movesets",
+                        "<span class='bold'>Sea King</span>: Stronger ability",
+                        "<span class='bold'>Pyromancer</span>: Reworked Fireball, improved Flame Pillars, new moveset",
+                        "<span class='bold'>Samurai</span>: New ability, removed flame",
+                        "<span class='bold'>Shinobi</span>: More balanced",
+                        "<span class='bold'>Spartan</span>: 3 new movesets",
+                        "<span class='bold'>Summoner</span>: Can only spawn one summon at a time, replaced 2 summons with better ones",
+                        "<span class='bold'>Swordmaster</span>: New moveset, new ability - Triple-wield",
+                        "<span class='bold'>Alchemist</span>: replaced by ████████"
+                    ]
+                },
+                {
+                    "secondaryTitle": "Quality of Life",
+                    "changes": [
+                        "Added map voting system: <span class='code'>/trigger vote_</span>(map name) to vote for a map to be picked",
+                        "New command for switching class mid-match: <span class='code'>/trigger switch_class</span>",
+                        "You can now exit spectator mode by using <span class='code'>/trigger spectate</span>",
+                        "Players can vote to end a match instantly by doing <span class='code'>/trigger end_match</span>",
+                        "Added a global leaderboard with stats of every player",
+                        "Players can now join and leave ongoing matches. You can now chill in the lobby and change your skins while a match is ongoing",
+                        "Arrows are slowed down and have no gravity to make them easier to predict",
+                        "Increased max stamina and stamina regen. Jumping consumes stamina."
+                    ]
+                }
+            ]
+        },
+        {
             "date": "14/03/24",
             "update": "Epic Fight Arena 2.0",
             "important": false,
@@ -11,9 +66,9 @@
                 {
                     "secondaryTitle": "Content changes:",
                     "changes": [
-                        "New map, Bobisburg",
-                        "New game-mode",
-                        "3 new classes!!",
+                        "New map, <span class='bold'>Bobisburg</span>",
+                        "<span class='bold'>New game-mode</span>",
+                        "<span class='bold'>3</span> new classes!!",
                         "Weapon skins",
                         "Minecraft-Discord in-game chat",
                         "Commands for seeing your stats (kills, deaths, wins, losses, etc...)",

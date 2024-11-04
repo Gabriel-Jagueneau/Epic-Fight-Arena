@@ -30,6 +30,12 @@ body {
 .reden {color: rgb(255, 31, 31)}
 .bold {font-weight: 600;}
 .link {color: rgb(0, 106, 255);&:hover {text-decoration: underline;}}
+.code {
+    font-family: 'Fira Code';
+    background-color: rgb(91, 91, 91);
+    padding: 0 2px;
+    border-radius: 5px;
+}
 
 /*      content      */
 
