@@ -65,6 +65,7 @@
                 font-size: 20px;
                 border-radius: 15px;
                 transform: none;
+                user-select: text;
             }
             & iframe {
                 width: 100%;
