@@ -48,7 +48,7 @@ async function makeFAQ() {
             <div class="contain">
                 <div class="question" onclick="makeDPD('dp-Q${index}')">
                     <div class="name mcfont">${el.Q}</div>
-                    <div class="dropdown" id="dp-Q${index}-arrow">arrow_downward</div>
+                    <div class="dropdown" id="dp-Q${index}-arrow">&#8250;</div>
                 </div>
                 <div id="dp-Q${index}" class="dp hidden">
                     <div class="sepa"></div>

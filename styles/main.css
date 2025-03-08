@@ -2,18 +2,21 @@ html {
     font-family: sans-serif;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    --bgcolor: rgba(44, 41, 41, 0.8);
 }
+
 body {
     margin: 0;
     padding: 0;
     position: absolute;
     display: flex;
     flex-direction: column;
-    background-color: rgb(105, 25, 25);
+    background-color: rgb(85, 18, 18);
     justify-content: center;
     color: rgb(233, 233, 233);
     overflow-x: hidden;
 }
+
 .tellrestricted {
     display: none;
 }
@@ -43,7 +46,7 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    background: linear-gradient(85deg, rgb(46, 42, 22) 20%, rgb(22, 46, 22), rgb(46, 22, 22) 80%);
+    background: linear-gradient(85deg, rgb(24, 2, 2) 0%, rgb(85, 18, 18)40%, rgb(85, 18, 18) 60%, rgb(24, 2, 2) 100%);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -56,7 +59,6 @@ body {
         gap: 5px;
         & div {
             font-size: 18px;
-            background-color: rgb(86, 30, 30);
             border-radius: 90px;
             padding: 6px 16px;
             transition: ease 0.2s;
@@ -107,7 +109,9 @@ body {
         & div {
             padding: 0px;
             &:hover {
-                box-shadow: 0 0 10px rgb(144, 40, 40);
+                padding: 0px;
+                box-shadow: none;
+                transform: scale(1.1);
             }
         }
         & img {
@@ -120,7 +124,6 @@ body {
         box-shadow: 0 0 10px rgba(0,0,0, 0.2);
         font-size: 20px;
         font-weight: 400;
-        padding-left: 20px;
         & .icon {
             font-family: 'Material Symbols Rounded';
             font-size: 24px;
