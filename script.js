@@ -20,16 +20,33 @@ var copyText = function(id, text) {
     navigator.clipboard.writeText(text)
         .then(() => {
             cpy.style = "background-color: lime; color: black;";
-            cpy.innerHTML = `Copied<div class="dld">done_all</div>`;
+            cpy.innerHTML = `Copied`;
         }).catch(() => {
             cpy.style = "background-color: red;";
-            cpy.innerHTML = `Error<div class="dld">error</div>`;
+            cpy.innerHTML = `Error`;
         }).finally(() => {
             setTimeout(() => {
                 cpy.style = "";
                 cpy.innerHTML = oldInner;
             }, 2000);
         });
+}
+
+function scrollToElement(id) {
+    if (!id) {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+        return;
+    }
+    var monBloc = document.getElementById(id);
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var targetY = monBloc.getBoundingClientRect().top + scrollTop - 100;
+    window.scrollTo({
+        top: targetY,
+        behavior: "smooth"
+    });
 }
 
 var makeDPD = function(id) {
@@ -56,23 +73,6 @@ async function makeFAQ() {
                 </div>
             </div>
         `).join('')}`;
-}
-
-function scrollToElement(id) {
-    if (!id) {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-        return;
-    }
-    var monBloc = document.getElementById(id);
-    var scrollTop = window.scrollY || document.documentElement.scrollTop;
-    var targetY = monBloc.getBoundingClientRect().top + scrollTop - 100;
-    window.scrollTo({
-        top: targetY,
-        behavior: "smooth"
-    });
 }
 
 var checkFetch = function() {

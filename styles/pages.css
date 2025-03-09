@@ -327,10 +327,6 @@
                     width: auto;
                     border-radius: 90px;
                 }
-                & .dld {
-                    font-family: 'Material Symbols Rounded';
-                    font-size: 26px;
-                }
                 &:hover {
                     background-color: rgb(255, 229, 31);
                     color: black
