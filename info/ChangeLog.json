@@ -2,6 +2,117 @@
     "name":"Change Log",
     "logs": [
         {
+            "date": "26/03/2025",
+            "update": "Epic Fight Arena 1.0.4",
+            "important": false,
+
+            "globalTitle": "Rebalance Part 1",
+            "content": [
+                {
+                    "secondaryTitle": "Class changes: Samurai",
+                    "changes": [
+                        "Slightly less impact",
+                        "Slightly less attack speed",
+                        "<span class='bold'>Mortal blade:</span> noticeably less attack speed, significantly: less impact, less armor penetration, smaller hitbox"
+                    ]
+                },
+                {
+                    "secondaryTitle": "Class changes: Brawler",
+                    "changes": [
+                        "less attack speed",
+                        "less impact",
+                        "innate fills up twice as slow",
+                        "significantly smaller hitbox",
+                        "<span class='bold'>Supercharged:</span> significantly less impact, massively reduced attack damage & speed."
+                    ]
+                },
+                {
+                    "secondaryTitle": "Class changes: Spartan",
+                    "changes": [
+                        "<span class='bold'>One hand:</span> doubled armor penetration from 20% to 40%, increased attack speed slightly.",
+                        "<span class='bold'>Divine Spear:</span> massively reduced impact, slightly reduced damage, visibly decreased attack speed."
+                    ]
+                },
+                {
+                    "secondaryTitle": "Class changes: Pyromancer",
+                    "changes": [
+                        "visibly reduced impact",
+                        "slightly decreased attack speed",
+                        "slightly decreased damage",
+                        "slightly increased armor penetration from 10% to 15%"
+                    ]
+                },
+                {
+                    "secondaryTitle": "Class changes: Cryomancer",
+                    "changes": [
+                        "<span class='bold'>Two handed:</span> slightly reduced attack speed",
+                        "<span class='bold'>One handed:</span> less impact, less attack speed"
+                    ]
+                },
+                {
+                    "secondaryTitle": "Class changes: Nether Champion",
+                    "changes": [
+                        "massively reduced attack damage",
+                        "slightly reduced attack speed",
+                        "slightly reduced armor penetration from 15% to 10%",
+                        "slightly reduced impact"
+                    ]
+                },
+                {
+                    "secondaryTitle": "Class changes: Shinobi",
+                    "changes": [
+                        "decreased attack speed",
+                        "reduced max strikes",
+                        "slightly reduced attack damage"
+                    ]
+                },
+                {
+                    "secondaryTitle": "Class changes: Gunslinger",
+                    "changes": [
+                        "significantly reduced impact",
+                        "slightly reduced attack speed"
+                    ]
+                },
+                {
+                    "secondaryTitle": "Class changes: Swordmaster",
+                    "changes": [
+                        "reduced attack speed",
+                        "slightly reduced impact"
+                    ]
+                },
+                {
+                    "secondaryTitle": "Class changes: Sea King",
+                    "changes": [
+                        "greatly increased impact",
+                        "slightly increased damage",
+                        "increased attack speed"
+                    ]
+                },
+                {
+                    "secondaryTitle": "Class changes: Assassin",
+                    "changes": [
+                        "slightly reduced attack damage",
+                        "visibly reduced attack speed"
+                    ]
+                },
+                {
+                    "secondaryTitle": "Class changes: Viking",
+                    "changes": [
+                        "removed meteor slam",
+                        "added revelation"
+                    ]
+                },
+
+                {
+                    "secondaryTitle": "Skill changes:",
+                    "changes": [
+                        "Relentless combo (Brawler) - charges twice as slow",
+                        "Impact guard (Viking, Berserker) - now blocks 90% of projectile damage instead of the previous 80%"
+                    ]
+                }
+            ]
+        },
+        {
             "date": "01/11/2024",
             "update": "Epic Fight Arena",
             "important": true,

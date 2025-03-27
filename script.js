@@ -124,7 +124,7 @@ async function fetchFile(id) {
                             ${i.content.map(j => `
                                 <div class="secondaryTitle">${j.secondaryTitle}</div>
                                 <div class="changes">${j.changes.map(k => `
-                                    <div class="change"><div class="tpe golden">-</div> ${k}</div>
+                                    <div class="change before">${k}</div>
                                 `).join('')}</div>
                             `).join('')}
                         </div>
